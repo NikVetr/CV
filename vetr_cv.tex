@@ -1,0 +1,238 @@
+% LaTeX template for (Academic) CV.
+% The template consists only of this file.
+% Document is to be structured as a normal article.
+% Created in 2017 by Pedro Tiago Martins (ptmartins.info).
+% Dedicated to the public domain.
+
+\documentclass[12pt]{article}
+\usepackage{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{enumitem}
+\usepackage{libertine} %font
+\usepackage[margin=2cm]{geometry} %margins
+\usepackage{fancyhdr} % header/footer
+\usepackage{lastpage} %last page (for footer)
+\pagestyle{fancy}
+\fancyhead{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyfoot[R]{\thepage/\pageref{LastPage}}
+
+\usepackage[usenames,dvipsnames,svgnames,x11names,table]{xcolor} % color
+\newcommand{\cvcolor}{\color{Maroon}} %easier to change color consistently
+\usepackage{doi} % easy input of doi numbers
+\usepackage{enumitem} % customized lists (reset counters with the resume option)
+\usepackage{titlesec} % customized section headers
+\usepackage{titling} % customized title
+\setlength\parindent{0em} 
+\setlength{\parskip}{0.5em}
+
+%Section Header format
+\titleformat{\section}
+{\LARGE\scshape}{}{0em}{\cvcolor}[\titlerule]
+
+\titleformat{\subsection}
+{\large\scshape}{}{0em}{\cvcolor}
+
+\titleformat{\subsubsection}
+{\bfseries}{}{0em}{}
+
+%Section header spacing
+\titlespacing{\section}
+{0em}{0em}{0em}
+
+\titlespacing{\subsection}
+{0em}{0.75em}{0em}
+
+\titlespacing{\subsubsection}
+{0em}{0em}{0em}
+
+%Title
+\renewcommand{\maketitle}{
+\begin{center}
+{\Huge\theauthor}\\
+{\Large \cvcolor{University of California, Davis}}\\
+
+nlashinsky@ucdavis.edu --- https://github.com/NikVetr/\\
+\vspace{0.25em}
+{\color{Gray}(last update: \today)}
+\end{center}
+}
+
+\begin{document}
+
+\title{Curriculum Vitae} % doesn't actually show up anywhere
+\author{Nikolai Vetr}
+
+\maketitle
+
+\section{Education}
+
+\textbf{PhD}\hfill\emph{2020}\\
+University of California, Davis\\
+Anthropology; Population Biology; Data Science \& Informatics
+
+\textbf{BA}\hfill\emph{2013}\\
+Vanderbilt University\\
+Earth \& Environmental Sciences (EES); Ecology, Evolution \& Organismal Biology (EEOB)\\
+Departmental Honors in EES, \textit{summa cum laude} overall\\
+\vspace{-1.25em}
+\subsection{Additional Education}
+
+\textbf{Discussion Groups}\hfill\emph{2013 - 2020}\\
+Active participant in groups on Computational Molecular Evolution, Paleoanthropology, Quantitative Genetics, and Machine Learning. Founder and lead in groups on Python, Applied Linear Algebra, Bayesian Data Analysis, and Deep Learning
+
+\textbf{Workshops}\hfill\emph{2013 - 2020}\\
+Have attended multiple workshops ranging in duration from 2h to 9d on Universal Design, Science Communication, Bayesian Phylogenetics, Database Management, Natural Language Processing, Carpentries Instructor Training, and other topics.
+
+\textbf{Online Courses}\hfill\emph{2013 - 2020}\\
+In addition to reading textbooks through discussion groups or on my own, I've worked through several online courses, such as Gilbert Strang's \emph{Linear Algebra} (MIT OpenCourseWare 18.06) or Andrew Ng's \emph{Deep Learning Specialization} (Coursera)
+
+\section{Languages}
+
+\textbf{Fluent:} Russian, English\\
+\textbf{Proficient:} Spanish, R, RevBayes, Stan, BASH\\
+\textbf{Beginner:} Python, C++\\
+
+\section{Projects}
+
+\subsection{Dissertation Work}
+
+My dissertation work has primarily centered on Bayesian computational phylogenetics methods development, specifically focused on extending and exploring multivariate Brownian (mvBM) diffusion models to novel applications and contexts. Projects in association with this work have involved:
+
+\begin{itemize}[noitemsep]
+
+\item through simulation \textbf{exploring the informativeness and reliability of continuous character alignments} at retrieval of simulating tree topology, with subsequent application to a craniometric dataset 
+\item the \textbf{effects of model misspecification} in the above, both with respect to the evolutionary process and with respect to accommodating missing data and measurement error
+\item \textbf{comparing model-based phylogenetic methods to more common heuristic (maximum parsimony, distance) methods}, both in simulation and empirically (using ape and old-world monkey datasets), and contrasting their performance to methods that use molecular (e.g. nucleotide sequence) data
+\item \textbf{comparison of different relaxed clock models} in a species-rich fish dataset whose tree height straddles the K-Pg boundary
+\item \textbf{approximating truncated biogeographic diffusions using data augmentation} on phylogenies to sample migration histories while respecting (land, water) barriers and explore latitudinal / climactic drivers of morphological differentiation in modern humans 
+\item \textbf{joint inference of ancestral character states} in a monkey dataset, with additional theory development on imputing unobserved tip characters in a phylogenetically sensible way 
+\item layering a \textbf{high-dimensional probit model atop mvBM to accommodate discrete traits} and comparing it with more traditional CTMC (\emph{Continuous Time Markov Chain}) models of discrete trait substitution, with empirical application to hominin dental variation
+
+\end{itemize}
+
+\subsection{Side Projects}
+
+Throughout my PhD, I've undertaken a number of side projects, some of which directly extended my dissertation work to non-evolutionary contexts and some of which used more distantly related methods. These have often been self-motivated, but also sometimes done in collaboration with or response to requests by third parties (e.g. as statistical co-author). These side-projects have included developing, fitting,  interpreting, describing, and visualizing results from:
+
+\begin{itemize}[noitemsep]
+
+\item high-dimensional multilevel generalized linear mixed models (GLMMs; Poisson, in this case) in Stan to \textbf{heart transplant patient immune response} data both before and after an acute rejection episode
+\item multilevel GLMMs in Stan to \textbf{consumer dietary and attitudinal response datasets} (zero-inflated Poisson and ordered logit, respectively) measuring the effects of exposure to a relevant advertisement urging dietary change
+\item a hierarchical univariate Ornstein-Uhlenbeck model in Stan to the 'evolution' of \textbf{nitrogen concentrations in manure ponds} across California to predict values after an arbitrary amount of time has passed in an arbitrary pond
+\item an efficient, conditional multivariate normal model in R that provides \textbf{personalized movie rating predictions} (given ratings for some movies and a large-but-sparse dataset of user reviews, what are the expected ratings and variances of unrated movies?) using probit and logit-normal transforms, exploiting basic properties of Schur complements
+
+\end{itemize}
+
+\subsection{Minor Projects}
+I've written many dozens of minor scripts ($<100$ LOC) devoted to data visualization, text mining, web scraping, replicating published analyses, and exploring off-the-cuff ideas proposed by myself or colleagues.
+
+I've also consulted individuals in a minor role (e.g. over a $\sim 1$h meeting) on many additional projects throughout graduate school.
+
+\subsection{Field \& Labwork}
+
+\textbf{Archaeological / Paleontological Excavator} \hfill \emph{2013}\\
+During the Summer 2013 field season I helped in excavation efforts ongoing at La Ferrassie, a Neandertal archaeological and paleontological site in Savignac-de-Miremont, France
+
+
+\textbf{Water Quality Analyst} \hfill \emph{2011}\\
+I performed water quality analyses (of salinity, reactive nitrogen concentrations, etc.) of a large set of streams distributed across the North Island of New Zealand
+
+\textbf{Stable Isotope Ecologist} \hfill \emph{2012 - 2013}\\
+As an undergraduate researcher, I examined how environmental and ecological conditions were recorded in enamel stable isotope ratios (carbon and oxygen) and dental microwear textures for several marsupial taxa throughout Australasia
+
+\section{Teaching}
+
+\textbf{Associate Instructor$^{*}$}, University of California, Davis \hfill \emph{2015  - 2020}\\
+As an associate instructor, I’ve taught three quarters of an upper-division paleoanthropology course, two quarters of an upper-division evolutionary primatology course, and one quarter of an introductory course on human evolution. In these roles, I created or modified all the lab and lecture materials, designed and graded the assignments and tests, delivered lectures, and either supervised teaching assistants or administered and oversaw the labs.
+
+\textbf{Teaching Assistant$^{*}$}, University of California, Davis \& Vanderbilt University \hfill \emph{2012  - 2020}\\
+I have taught a total of 14 discussion sections for the aforementioned human evolution and paleoanthropology courses (see above), as well as the lab for an introductory cell biology course at Vanderbilt University. As a TA, I occasionally gave guest lectures on various subjects (mostly statistical phylogenetics).
+
+\textbf{Outreach Lecturer}, University of California, Davis \hfill \emph{2013  - 2020}\\
+I've given multiple yearly talks on human evolution to elementary and middle school students on location and visiting UC-Davis, as well as during campus-wide events (e.g. \emph{Picnic Day}).
+
+\textbf{Course Coordinator}, Workshop in Applied Phylogenetics \hfill \emph{2019}\\
+I served as a course coordinator for world-renowned, widely-attended, week-long workshop in applied computational Bayesian phylogenetics held in May 2019 at the Bodega Marine Laboratory.
+
+\textbf{Carpentries Instructor}\hfill \emph{2019}\\
+I have completed Instructor Training and Checkout for The Carpentries organization and fully certified to teach courses in Data and Software Carpentries.
+
+$^{*}$\emph{student evaluations available upon request}
+\section{Leadership}
+
+\textbf{Founder \& Lead}, Applied Bayesian Statistics Research Cluster \hfill \emph{2019 - 2020}\\
+I founded, coordinated, and supervised an interdisciplinary research cluster of 70+ scientists and statisticians across numerous career stages (PhD Student, Postdoc, PI, Industry Researcher), sponsored by the UC-Davis \emph{Data Science \& Informatics} Unit.\\\\
+\textbf{Coordinator}, Various Reading Groups \hfill \emph{2014 - 2020}\\
+I've founded and coordinated reading groups on Python, Applied Linear Algebra, Bayesian Data Analysis, and Deep Learning.\\\\
+\textbf{Undergraduate Student Mentor}, UC-Davis \hfill \emph{2014 - 2020}\\
+While serving as a college instructor, I've mentored several undergraduate students, meeting frequently to advise them on their career and research aspirations.
+
+\section{Publications}
+
+\subsection{Papers}
+
+\begin{enumerate}[label={[\arabic*]}]
+
+\item Gates, K., Biendarra-Tiegs, S., \textbf{Vetr, N.}, Higuita, M. Nelson, T., Pereira, N, and Griffiths, L. 2019.  \emph{Non-HLA antigens modulate heart transplant dysfunction}. In review by Circulation Research.
+
+\item \textbf{Vetr, N.}, May, M., Moore, B., and Weaver, T. 2019.  \emph{Bayesian Phylogenetic Inference Under Multivariate Brownian Motion}. Submitted to Systematic Biology.
+
+\item \textbf{Vetr, N.}, DeSantis, L., Yann, L., et al. 2013.  \emph{Is Rapoport’s Rule a Recent Phenomenon? A Deep Time Perspective on Potential Causal Mechanisms}. Biology Letters 9(5): 1-5. DOI: 10.1098/rsbl.2013.0398
+
+
+\end{enumerate}
+
+
+\subsection{Conference Presentations}
+
+\begin{enumerate}[label={[\arabic*]}]
+
+\item \textbf{Lashinsky, N}. and DeSantis, L. 2012. \emph{Assessing how the extant lesser forest-wallaby Dorcopsulus vanheurni and Lumholtz’s tree kangaroo Dendrolagus lumholtzi record their environment: establishing a baseline for studies of extinct marsupials}. Poster presented at the 5th Annual Meeting of the Southeastern Association of Vertebrate Paleontology. 
+
+\item Desantis, L., \textbf{Lashinsky, N}., Romer, J., Greshko, M., and Loffredo, L. 2013. \emph{University Students' Acceptance of Climate Change and Evolution: Are Skeptics just Anti- Science?} Poster presented despite second authorship at the 73rd Annual Meeting of the Society of Vertebrate Paleontology. 
+
+\item \textbf{Lashinsky, N}., DeSantis, L. Yann, S. Donohue, and R. Haupt. 2013 \emph{Is Rapoport’s Rule a Recent Phenomenon? A Deep Time Perspective on Potential Causal Mechanisms}. Oral session presented at the 73rd Annual Meeting of the Society of Vertebrate Paleontology. 
+
+\item \textbf{Vetr, N}., May, M. Moore, B., and R. Weaver. 2018 \emph{Adapting multivariate Brownian diffusion models to Bayesian inference of human population history and phylogeny}. Oral session presented at the 87th Annual Meeting of the American Association of Physical Anthropologists.
+
+\end{enumerate}
+
+\section{Grants \& Awards}
+
+
+\textbf{Crook Travel Award}\hfill \emph{2018}\\
+\textbf{1st Place Picnic Day Exhibit Award in “Secrets of Nature” Category}\hfill \emph{2017}\\
+\textbf{Outstanding Graduate Student Teaching Award Nomination}\hfill \emph{2016, 2019}\\
+\textbf{Summer Research Grant}\hfill \emph{2015}\\
+\textbf{NSF Graduate Research Fellowship}\hfill \emph{2015}\\
+\textbf{Summer Research Grant}\hfill \emph{2014}\\
+\textbf{Graduate Scholars Fellowship}\hfill \emph{2013}\\
+\textbf{Departmental Honors in Earth and Environmental Sciences}\hfill \emph{2013}\\
+\textbf{Eugene H. Vaughan Undergraduate Research Assistantship in Geology }\hfill \emph{2012}\\
+\textbf{Geology Travel Grant}\hfill \emph{2012}\\
+\textbf{Vanderbilt Undergraduate Summer Research Grant}\hfill \emph{2012}\\
+\textbf{Ross Family Scholarship}\hfill \emph{2012}\\
+\textbf{National Merit Scholarship}\hfill \emph{2019}\\
+
+
+
+
+\section{Service}
+
+\subsection{Journal Article Review}
+
+\emph{Science Communications} (2018)\\
+\emph{Evolution} (2017)
+
+
+
+\section{Other}
+\textbf{Computer Hardware}\\ Familiar with computer assembly and repair. Constructed and networked a 7-node Ryzen-based Beowulf cluster running macOS for dissertation work, with analyses parallelized using \emph{GNU Parallel}, as well as a portable 5-node Raspberry Pi cluster running Linux. Have designed and assembled machines for colleagues after consultation on their computational needs.\\\\
+\textbf{Outdoors}\\ Avid and experienced outdoorsman, having coordinated and lead many hiking, backpacking, and climbing trips of varying group size over distances typically between 50-150km, but ranging upwards to 1,300km, and have also backpacked and hitchhiked through several countries. Sporadically partake in other adventure sports (snowboarding, kayaking, cycling, etc.) \\\\
+\textbf{Photography}\\ Hobbyist photographer, graphic designer, and illustrator focusing on portrait, landscape, and wildflife photography, with post-processing typically done in Capture One and Adobe Photoshop and recently augmented with more sophisticated computational tools (e.g. ANNs).\\\\
+\textbf{Charity}\\ Active participant in the \emph{Effective Altruism} movement since it's inception; donate regularly to meta-charity approved organizations, and also occasionally serve as a volunteer statistical consultant.\\\\
+
+%\textbf{Academic Metrics}: GRE Scores: 169 (V), 170 (Q), 5.5 (W); SAT Scores: 800 (M), 800 (V); Cumulative Undergraduate GPA: 3.91, Cumulative Graduate GPA: 4.0
+\end{document}
