@@ -104,9 +104,10 @@ My dissertation work has primarily centered on Bayesian computational phylogenet
 
 \item through simulation \textbf{exploring the informativeness and reliability of continuous character alignments} at retrieval of simulating tree topology, with subsequent application to a craniometric dataset 
 \item the \textbf{effects of model misspecification} in the above, both with respect to the evolutionary process and with respect to accommodating missing data and measurement error
+\item developing and implementing novel optimizations to \textbf{reduce the time complexity} of likelihood calculation under the phylogenetic mvBM model from O($n^2$) to O($n$), modularizing particular operations to \textbf{avoid redundant computation} during Met-Hastings, and inventing substantially \textbf{more efficient, tunable proposal distributions} over correlation matrices of arbitrary dimensionality. In total, \textbf{reducing the runtime of required} to fit this popular evolutionary model under typical empirical conditions from months to hours. 
 \item \textbf{comparing model-based phylogenetic methods to more common heuristic (maximum parsimony, distance) methods}, both in simulation and empirically (using ape and old-world monkey datasets), and contrasting their performance to methods that use molecular (e.g. nucleotide sequence) data
 \item \textbf{comparison of different relaxed clock models} in a species-rich fish dataset whose tree height straddles the K-Pg boundary
-\item \textbf{approximating truncated biogeographic diffusions using data augmentation} on phylogenies to sample migration histories while respecting (land, water) barriers and explore latitudinal / climactic drivers of morphological differentiation in modern humans 
+\item \textbf{approximating truncated biogeographic diffusions using data augmentation} on phylogenies to sample migration histories while respecting (land, water) barriers to explore latitudinal / climactic drivers of morphological differentiation in modern humans 
 \item \textbf{joint inference of ancestral character states} in a monkey dataset, with additional theory development on imputing unobserved tip characters in a phylogenetically sensible way 
 \item layering a \textbf{high-dimensional probit model atop mvBM to accommodate discrete traits} and comparing it with more traditional CTMC (\emph{Continuous Time Markov Chain}) models of discrete trait substitution, with empirical application to hominin dental variation
 
@@ -126,7 +127,7 @@ Throughout my PhD, I've undertaken a number of side projects, some of which dire
 \end{itemize}
 
 \subsection{Minor Projects}
-I've written many dozens of minor scripts ($<100$ LOC) devoted to data visualization, text mining, web scraping, replicating published analyses, and exploring off-the-cuff ideas proposed by myself or colleagues.
+I've written many dozens of minor scripts ($<100$ LOC) devoted to data visualization, text mining, web scraping, replicating published analyses or algorithms from scratch, and exploring off-the-cuff ideas proposed by myself or colleagues.
 
 I've also consulted individuals in a minor role (e.g. over a $\sim 1$h meeting) on many additional projects throughout graduate school.
 
@@ -235,7 +236,7 @@ While serving as a college instructor, I've mentored several undergraduate stude
 
 
 \section{Other}
-\textbf{Computer Hardware}\\ Familiar with computer assembly and repair. Constructed and networked an 8-node (64C/128T) Ryzen-based Beowulf cluster running macOS for dissertation work, with analyses parallelized using \emph{GNU Parallel}, as well as a portable 5-node Raspberry Pi cluster running Linux. Have designed and assembled machines for colleagues after consultation on their computational needs.\\\\
+\textbf{Computer Hardware}\\ Familiar with computer assembly and repair. Constructed and networked an 8-node (64C/128T) Ryzen-based Beowulf cluster running macOS for dissertation work, with analyses parallelized using \emph{GNU Parallel}, as well as a portable 5-node Raspberry Pi cluster running Linux. Have designed and assembled similar systems for academic colleagues after consultation on their computational needs.\\\\
 \textbf{Outdoors}\\ Avid and experienced outdoorsman, having coordinated and lead many hiking, backpacking, and climbing trips of varying group size over distances typically between 50-150km, but ranging upwards to 1,300km, and have also backpacked and hitchhiked through several countries. Sporadically partake in other adventure sports (snowboarding, kayaking, cycling, etc.) \\\\
 \textbf{Photography}\\ Hobbyist photographer, graphic designer, and illustrator focusing on portrait, landscape, and wildflife photography, with post-processing typically done in Capture One and Adobe Photoshop and recently augmented with more sophisticated computational tools (e.g. ANNs).\\\\
 \textbf{Charity}\\ Active participant in the \emph{Effective Altruism} movement since it's inception; donate regularly to meta-charity approved organizations, and also occasionally serve as a volunteer statistical consultant.\\\\
