@@ -9,7 +9,9 @@
 \usepackage[utf8]{inputenc}
 \usepackage{enumitem}
 \usepackage{libertine} %font
-\usepackage[margin=2cm]{geometry} %margins
+\usepackage[margin=1.7cm]{geometry} %margins
+\addtolength{\topmargin}{-.25in}
+%\addtolength{\textheight}{1.75in}
 \usepackage{fancyhdr} % header/footer
 \usepackage{lastpage} %last page (for footer)
 \pagestyle{fancy}
@@ -48,13 +50,16 @@
 {0em}{0em}{0em}
 
 %Title
+
 \renewcommand{\maketitle}{
 \begin{center}
+
 {\Huge\theauthor}\\
+\vspace{0.25em}
 {\Large \cvcolor{University of California, Davis}}\\
 
 nlashinsky@ucdavis.edu --- https://github.com/NikVetr/\\
-\vspace{0.25em}
+
 {\color{Gray}(last update: \today)}
 \end{center}
 }
@@ -66,16 +71,18 @@ nlashinsky@ucdavis.edu --- https://github.com/NikVetr/\\
 
 \maketitle
 
+\vspace{-1.5em}
+
 \section{Education}
 
 \textbf{PhD}\hfill\emph{2020}\\
 University of California, Davis\\
-Anthropology; Population Biology; Data Science \& Informatics
+GPA: 4.0/4.0; Anthropology, Population Biology, Data Science \& Informatics
 
 \textbf{BA}\hfill\emph{2013}\\
 Vanderbilt University\\
-Earth \& Environmental Sciences (EES); Ecology, Evolution \& Organismal Biology (EEOB)\\
-Departmental Honors in EES, \textit{summa cum laude} overall\\
+GPA: 3.9/4.0; Earth \& Environmental Sciences; Ecology, Evolution \& Organismal Biology\\
+Departmental Honors, \textit{summa cum laude}\\
 \vspace{-1.25em}
 \subsection{Additional Education}
 
@@ -127,6 +134,7 @@ Throughout my PhD, I've undertaken a number of side projects, some of which dire
 \item multilevel GLMMs in Stan to \textbf{consumer dietary and attitudinal response datasets} (zero-inflated Poisson and ordered logit, respectively) measuring the effects of exposure to a relevant advertisement urging dietary change
 \item a hierarchical univariate Ornstein-Uhlenbeck model in Stan to the 'evolution' of \textbf{nitrogen concentrations in manure ponds} across California to predict values after an arbitrary amount of time has passed in an arbitrary pond
 \item an efficient, conditional multivariate normal model in R that provides \textbf{personalized movie rating predictions} (given ratings for some movies and a large-but-sparse dataset of user reviews, what are the expected ratings and variances of unrated movies?) using probit and logit-normal transforms, exploiting basic properties of Schur complements
+\item a Bayesian ConvNet fitted to \textbf{medical (skin lesion) image data}, currently in prep for a workshop I'll be hosting through \emph{Data Science \& Informatics}
 
 \end{itemize}
 
@@ -180,13 +188,13 @@ While serving as a college instructor, I've mentored several undergraduate stude
 
 \begin{enumerate}[label={[\arabic*]}]
 
-\item \textbf{Vetr, N.} and Weaver, T. 2020.  \emph{Phylogenetic Inference under a Blocked Multivariate Threshold Model: Exploring Performance through Simulation and Application to Hominin Dentition}. In prep for PLOS ONE.
+\item \textbf{Vetr, N.} and Weaver, T. 2020.  \emph{Phylogenetic Inference under the Multivariate Ordinal Threshold Model: Exploring Performance through Simulation and Application to Human Dentition}. In prep for PLOS ONE.
 
 \item \textbf{Vetr, N.} and Weaver, T. 2020.  \emph{Primate Phylogenetics with Landmark Data: A Model-Based, Multivariate Brownian Approach}. In prep for The Journal of Human Evolution.
 
 \item Gates, K., Biendarra-Tiegs, S., \textbf{Vetr, N.}, Higuita, M. Nelson, T., Pereira, N, and Griffiths, L. 2019.  \emph{Non-HLA antigens modulate heart transplant dysfunction}. In review by Circulation Research.
 
-\item \textbf{Vetr, N.}, May, M., Moore, B., and Weaver, T. 2019.  \emph{Bayesian Phylogenetic Inference Under Multivariate Brownian Motion}. Submitted to Systematic Biology.
+\item \textbf{Vetr, N.}, May, M., Moore, B., and Weaver, T. 2019.  \emph{Bayesian Phylogenetic Inference Under Multivariate Brownian Motion}. Awaiting submission to Systematic Biology.
 
 \item \textbf{Vetr, N.} 2017.  \emph{Non-Synapomorphic Traits are Phylogenetically Informative}. In prep.
 
@@ -200,22 +208,23 @@ While serving as a college instructor, I've mentored several undergraduate stude
 
 \begin{enumerate}[label={[\arabic*]}]
 
-\item \textbf{Lashinsky, N}. and DeSantis, L. 2012. \emph{Assessing how the extant lesser forest-wallaby Dorcopsulus vanheurni and Lumholtz’s tree kangaroo Dendrolagus lumholtzi record their environment: establishing a baseline for studies of extinct marsupials}. Poster presented at the 5th Annual Meeting of the Southeastern Association of Vertebrate Paleontology. 
+\item \textbf{Vetr, N}., May, M. Moore, B., and R. Weaver. 2018 \emph{Adapting multivariate Brownian diffusion models to Bayesian inference of human population history and phylogeny}. Oral session presented at the 87th Annual Meeting of the American Association of Physical Anthropologists.
 
 \item Desantis, L., \textbf{Lashinsky, N}., Romer, J., Greshko, M., and Loffredo, L. 2013. \emph{University Students' Acceptance of Climate Change and Evolution: Are Skeptics just Anti- Science?} Poster presented despite second authorship at the 73rd Annual Meeting of the Society of Vertebrate Paleontology. 
 
 \item \textbf{Lashinsky, N}., DeSantis, L. Yann, S. Donohue, and R. Haupt. 2013 \emph{Is Rapoport’s Rule a Recent Phenomenon? A Deep Time Perspective on Potential Causal Mechanisms}. Oral session presented at the 73rd Annual Meeting of the Society of Vertebrate Paleontology. 
 
-\item \textbf{Vetr, N}., May, M. Moore, B., and R. Weaver. 2018 \emph{Adapting multivariate Brownian diffusion models to Bayesian inference of human population history and phylogeny}. Oral session presented at the 87th Annual Meeting of the American Association of Physical Anthropologists.
+\item \textbf{Lashinsky, N}. and DeSantis, L. 2012. \emph{Assessing how the extant lesser forest-wallaby Dorcopsulus vanheurni and Lumholtz’s tree kangaroo Dendrolagus lumholtzi record their environment: establishing a baseline for studies of extinct marsupials}. Poster presented at the 5th Annual Meeting of the Southeastern Association of Vertebrate Paleontology. 
+
 
 \end{enumerate}
 
+\vspace{-0.35em}
 \section{Grants \& Awards}
-
 
 \textbf{Crook Travel Award}\hfill \emph{2018}\\
 \textbf{1st Place Picnic Day Exhibit Award in “Secrets of Nature” Category}\hfill \emph{2017}\\
-\textbf{Outstanding Graduate Student Teaching Award Nomination}\hfill \emph{2016, 2019}\\
+\textbf{Outstanding Graduate Student Teaching Award Nominee}\hfill \emph{2016, 2019, 2020}\\
 \textbf{Summer Research Grant}\hfill \emph{2015}\\
 \textbf{NSF Graduate Research Fellowship}\hfill \emph{2015}\\
 \textbf{Summer Research Grant}\hfill \emph{2014}\\
@@ -228,7 +237,7 @@ While serving as a college instructor, I've mentored several undergraduate stude
 \textbf{National Merit Scholarship}\hfill \emph{2009}\\
 
 
-
+\vspace{-0.35em}
 
 \section{Service}
 
@@ -243,8 +252,7 @@ While serving as a college instructor, I've mentored several undergraduate stude
 \textbf{Computer Hardware}\\ Familiar with computer assembly and repair. Constructed and networked an 8-node (64C/128T) Ryzen-based Beowulf cluster running macOS for dissertation work, with analyses parallelized using \emph{GNU Parallel}, as well as a portable 5-node Raspberry Pi cluster running Linux. Have designed and assembled similar systems for academic colleagues after consultation on their computational needs.\\\\
 \textbf{Outdoors}\\ Avid and experienced outdoorsman, having coordinated and lead many hiking, backpacking, and climbing trips of varying group size over distances typically between 50-150km, but ranging upwards to 1,300km, and have also backpacked and hitchhiked through several countries. Sporadically partake in other adventure sports (snowboarding, kayaking, cycling, etc.) \\\\
 \textbf{Photography}\\ Hobbyist photographer, graphic designer, and illustrator focusing on portrait, landscape, and wildflife photography, with post-processing typically done in Capture One and Adobe Photoshop and recently augmented with more sophisticated computational tools (e.g. ANNs).\\\\
-\vspace{1cm}\\
-\textbf{Charity}\\ Active participant in the \emph{Effective Altruism} movement since it's inception; donate regularly to meta-charity approved organizations, and also occasionally serve as a volunteer statistical consultant.\\\\
+\textbf{Charity}\\ Active participant in the \emph{Effective Altruism} movement since it's inception; donate regularly to meta-charity approved organizations and occasionally serve as a volunteer statistical consultant.
 
 %\textbf{Academic Metrics}: GRE Scores: 169 (V), 170 (Q), 5.5 (W); SAT Scores: 800 (M), 800 (V); Cumulative Undergraduate GPA: 3.91, Cumulative Graduate GPA: 4.0
 \end{document}
