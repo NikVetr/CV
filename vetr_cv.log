@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  21 MAR 2020 17:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  23 MAR 2020 16:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -587,6 +587,16 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <8> on input line 100.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 100.
+LaTeX Font Info:    Try loading font information for OT1+LinuxLibertineMonoT-TL
+F on input line 104.
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/libertine/OT1LinuxLibertineMonoT-
+TLF.fd
+File: OT1LinuxLibertineMonoT-TLF.fd 2017/03/20 (autoinst) Font definitions for 
+OT1/LinuxLibertineMonoT-TLF.
+)
+LaTeX Font Info:    Font shape `OT1/LinuxLibertineMonoT-TLF/m/n' will be
+(Font)              scaled to size 12.0pt on input line 104.
 LaTeX Font Info:    Try loading font information for TS1+LinuxLibertineT-TLF on
  input line 116.
 
@@ -649,31 +659,33 @@ Package rerunfilecheck Info: File `vetr_cv.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 258.
  ) 
 Here is how much of TeX's memory you used:
- 8809 strings out of 492649
- 136260 string characters out of 6129622
+ 8835 strings out of 492649
+ 137177 string characters out of 6129622
  252575 words of memory out of 5000000
- 12550 multiletter control sequences out of 15000+600000
- 21012 words of font info for 41 fonts, out of 8000000 for 9000
+ 12571 multiletter control sequences out of 15000+600000
+ 21236 words of font info for 42 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,11n,68p,602b,476s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/libertine/lbtn_naooyc.enc
-}{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/libertine/lbtn_kijugd.enc}
-{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/libertine/lbtn_lyu3x3.enc}{
-/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/libertine/lbtn_n3gv2c.enc}{/
-usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/libertine/lbtn_oexx6f.enc}</u
-sr/local/texlive/2018/texmf-dist/fonts/type1/public/libertine/LinLibertineT.pfb
+}{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/libertine/lbtn_3dk467.enc}
+{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/libertine/lbtn_kijugd.enc}{
+/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/libertine/lbtn_lyu3x3.enc}{/
+usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/libertine/lbtn_n3gv2c.enc}{/u
+sr/local/texlive/2018/texmf-dist/fonts/enc/dvips/libertine/lbtn_oexx6f.enc}</us
+r/local/texlive/2018/texmf-dist/fonts/type1/public/libertine/LinLibertineMT.pfb
 ></usr/local/texlive/2018/texmf-dist/fonts/type1/public/libertine/LinLibertineT
-B.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/libertine/LinLiber
-tineTI.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mmi12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-r12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8
-.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.
-pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pf
-b>
-Output written on vetr_cv.pdf (5 pages, 329034 bytes).
+.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/libertine/LinLibert
+ineTB.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/libertine/LinL
+ibertineTI.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmmi12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmr12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmr8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cms
+y10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
+8.pfb>
+Output written on vetr_cv.pdf (5 pages, 346443 bytes).
 PDF statistics:
- 161 PDF objects out of 1000 (max. 8388607)
- 144 compressed objects within 2 object streams
+ 166 PDF objects out of 1000 (max. 8388607)
+ 148 compressed objects within 2 object streams
  33 named destinations out of 1000 (max. 500000)
  137 words of extra memory for PDF output out of 10000 (max. 10000000)
 
