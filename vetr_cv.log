@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.4.7)  2 APR 2021 15:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.4.7)  2 APR 2021 15:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -434,17 +434,17 @@ LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/b/n' will be
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/it' will be
 (Font)              scaled to size 12.0pt on input line 79.
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 14.4pt on input line 94.
+(Font)              scaled to size 14.4pt on input line 95.
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/sc' will be
-(Font)              scaled to size 14.4pt on input line 94.
+(Font)              scaled to size 14.4pt on input line 95.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 108.
+(Font)              <12> on input line 109.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 108.
+(Font)              <8> on input line 109.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 108.
+(Font)              <6> on input line 109.
 LaTeX Font Info:    Trying to load font information for OT1+LinuxLibertineMonoT
--TLF on input line 112.
+-TLF on input line 113.
 
 (/usr/local/texlive/2020/texmf-dist/tex/latex/libertine/OT1LinuxLibertineMonoT-
 TLF.fd
@@ -454,14 +454,14 @@ OT1/LinuxLibertineMonoT-TLF.
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineMonoT-TLF/m/n' in size <12> n
 ot available
 (Font)              Font shape `OT1/LinuxLibertineMonoT-TLF/regular/n' tried in
-stead on input line 112.
+stead on input line 113.
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineMonoT-TLF/regular/n' will be
-(Font)              scaled to size 12.0pt on input line 112.
+(Font)              scaled to size 12.0pt on input line 113.
  [1
 
 {/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 LaTeX Font Info:    Trying to load font information for TS1+LinuxLibertineT-TLF
- on input line 133.
+ on input line 134.
 
 (/usr/local/texlive/2020/texmf-dist/tex/latex/libertine/TS1LinuxLibertineT-TLF.
 fd
@@ -469,63 +469,63 @@ File: TS1LinuxLibertineT-TLF.fd 2017/03/20 (autoinst) Font definitions for TS1/
 LinuxLibertineT-TLF.
 )
 LaTeX Font Info:    Font shape `TS1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 12.0pt on input line 133.
+(Font)              scaled to size 12.0pt on input line 134.
  [2]
-Underfull \hbox (badness 10000) in paragraph at lines 186--188
+Underfull \hbox (badness 10000) in paragraph at lines 187--189
 
  []
 
 [3]
-Underfull \hbox (badness 10000) in paragraph at lines 209--217
+Underfull \hbox (badness 10000) in paragraph at lines 210--218
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 209--217
+Underfull \hbox (badness 10000) in paragraph at lines 210--218
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 209--217
+Underfull \hbox (badness 10000) in paragraph at lines 210--218
 
  []
 
 [4] [5]
-Underfull \hbox (badness 10000) in paragraph at lines 261--274
+Underfull \hbox (badness 10000) in paragraph at lines 262--275
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 281--285
+Underfull \hbox (badness 10000) in paragraph at lines 282--286
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 281--285
+Underfull \hbox (badness 10000) in paragraph at lines 282--286
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 281--285
+Underfull \hbox (badness 10000) in paragraph at lines 282--286
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 281--285
+Underfull \hbox (badness 10000) in paragraph at lines 282--286
 
  []
 
 
 AED: lastpage setting LastPage
 [6]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 287.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 287.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 288.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 288.
  (./vetr_cv.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 287.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 287.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 288.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 288.
 Package rerunfilecheck Info: File `vetr_cv.out' has not changed.
 (rerunfilecheck)             Checksum: FAFB143E03B45BE2E0F5C2D22F16405B;1002.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 287.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 288.
  ) 
 Here is how much of TeX's memory you used:
  8657 strings out of 480608
@@ -551,7 +551,7 @@ m/cmr12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/
 cmr8.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cms
 y10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
 8.pfb>
-Output written on vetr_cv.pdf (6 pages, 348452 bytes).
+Output written on vetr_cv.pdf (6 pages, 348458 bytes).
 PDF statistics:
  175 PDF objects out of 1000 (max. 8388607)
  156 compressed objects within 2 object streams
