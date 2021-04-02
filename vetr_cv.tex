@@ -14,6 +14,7 @@
 %\addtolength{\textheight}{1.75in}
 \usepackage{fancyhdr} % header/footer
 \usepackage{lastpage} %last page (for footer)
+\usepackage[hidelinks]{hyperref}
 \pagestyle{fancy}
 \fancyhead{}
 \fancyfoot{}
@@ -56,9 +57,9 @@
 
 {\Huge\theauthor}\\
 \vspace{0.25em}
-{\Large \cvcolor{University of California, Davis}}\\
+{\Large \cvcolor{Stanford University, California}}\\
 
-nlashinsky@ucdavis.edu --- https://github.com/NikVetr/\\
+nikgvetr@stanford.edu --- github.com/NikVetr/ --- linkedin.com/in/nikolai-vetr\\
 
 {\color{Gray}(last update: \today)}
 \end{center}
@@ -75,10 +76,14 @@ nlashinsky@ucdavis.edu --- https://github.com/NikVetr/\\
 
 \section{Education}
 
+\textbf{Postdoc}, Stanford University\hfill\emph{Current}\\
+Computational Biology; Depts: Pathology, Genetics, Computer Science
+\vspace{-0.25em}
+
 \textbf{PhD}\hfill\emph{2020}\\
 University of California, Davis\\
-Dissertation: \textit{Exploring and Extending Multivariate Brownian Diffusion Models of Phenotypic Evolution for Bayesian Phylogenetic Inference}\\
-Committee: Tim Weaver (Chair), Shara Bailey, Peter Wainwright, Brian Moore\\
+Dissertation: \textit{Exploring and Extending Multivariate Brownian Diffusion Models \\of Phenotypic Evolution for Bayesian Phylogenetic Inference}\\
+Committee: Tim Weaver (Chair), Shara Bailey, Peter Wainwright\\
 GPA: 4.0/4.0 — Anthropology; Population Biology; Data Science \& Informatics
 
 \textbf{BA}\hfill\emph{2013}\\
@@ -97,6 +102,7 @@ Have attended multiple workshops ranging in duration from 2h to 9d on Universal 
 \textbf{Online Courses}\hfill\emph{2013 - 2020}\\
 In addition to reading textbooks through discussion groups or on my own, I've worked through several online courses, such as Gilbert Strang's \emph{Linear Algebra} (MIT OpenCourseWare 18.06) or Andrew Ng's \emph{Deep Learning Specialization} (Coursera)
 
+
 \section{Languages}
 
 \noindent\begin{tabular}{@{}ll}
@@ -104,25 +110,49 @@ In addition to reading textbooks through discussion groups or on my own, I've wo
 \textbf{Fluent:} & \hspace{3cm} Russian, English\\
 \textbf{Proficient:} R, RevBayes, Stan, BASH &  \hspace{3cm} Spanish\\
 \textbf{Beginner:}  \hspace{0.035cm} Python, C\texttt{++} &  \hspace{3cm} \\
-
 \end{tabular}
+
+
+\section{Service}
+
+\subsection{Journal Article Review}
+
+\emph{Science Communications} (2018)\\
+\emph{Evolution} (2017)
+
+
 
 \section{Projects}
 
+\subsection{Postdoctoral Work}
+
+My postdoctoral work focuses on exploring and developing statistical methods to better understand the molecular mechanisms by which genetic and environmental variation structure phenotypic variation, especially insofar as that understanding might have translational applications in contexts such as drug discovery and personalized medicine. Current projects include:
+
+\begin{itemize}[noitemsep]
+
+\item Integrating GWAS and eQTL mapping results with transcriptomic, proteomic, and ATAC-seq data to help \textbf{identify the molecular transducers of physical activity} through the MoTrPAC Consortium using a variety of EDA and regression-based tools (e.g. LDSC)
+
+\item Hiearchically modeling the \textbf{temporal dynamics of whole-trancriptome expression data} following a perturbation using linear combinations of logistic functions to describe how expected rates of gamma-poisson distributed read counts behave across time
+
+\item Analytically exploring \textbf{thresholding effects in rare e-variant calling in heterogenous populations} through the use of Gaussian (and other) mixture models
+
+
+\end{itemize}
+
 \subsection{Dissertation Work}
 
-My dissertation work has primarily centered on Bayesian computational phylogenetics methods development, specifically focused on extending and exploring multivariate Brownian (mvBM) diffusion models to novel applications and contexts. Projects in association with this work have involved:
+My dissertation work primarily centered on Bayesian computational phylogenetics methods development, specifically focused on extending and exploring multivariate Brownian (mvBM) diffusion models to novel applications and contexts. Projects in association with this work have involved:
 
 \begin{itemize}[noitemsep]
 
 \item through simulation \textbf{exploring the informativeness and reliability of continuous character alignments} at retrieval of simulating tree topology, with subsequent application to a craniometric dataset 
 \item the \textbf{effects of model misspecification} in the above, both with respect to the evolutionary process and with respect to accommodating missing data and measurement error
-\item developing and implementing novel optimizations to \textbf{reduce the time complexity} of likelihood calculation under the phylogenetic mvBM model from O($n^2$) to O($n$), modularizing particular operations to \textbf{avoid redundant computation} during Met-Hastings, and inventing substantially \textbf{more efficient, tunable proposal distributions} over correlation matrices of arbitrary dimensionality. In total, \textbf{reducing the runtime required} to fit this popular evolutionary model under typical empirical conditions from months to hours
+\item developing and implementing novel optimizations to \textbf{reduce the time complexity} of likelihood calculation under the phylogenetic mvBM model from O($n^3$) to O($n^2$), modularizing particular operations to \textbf{avoid redundant computation} during Met-Hastings, and inventing substantially \textbf{more efficient, tunable proposal distributions} over correlation matrices of arbitrary dimensionality. In total, \textbf{reducing the runtime required} to fit this popular evolutionary model under typical empirical conditions from months to hours
 \item \textbf{comparing model-based phylogenetic methods to more common heuristic (maximum parsimony, distance) methods}, both in simulation and empirically (using ape and old-world monkey datasets), and contrasting their performance to methods that use molecular (e.g. nucleotide sequence) data
 \item \textbf{comparison of morphological relaxed clock models} in a species-rich fish dataset whose tree height straddles the K-Pg boundary
 \item \textbf{approximating truncated biogeographic diffusions using data augmentation} on phylogenies to sample migration histories while respecting (land, water) barriers to explore latitudinal / climactic drivers of morphological differentiation in modern humans 
 \item \textbf{joint inference of ancestral character states} in a monkey dataset, with additional theory development on imputing unobserved tip characters in a phylogenetically sensible way 
-\item layering a \textbf{high-dimensional probit model atop mvBM to accommodate discrete traits} and comparing it with more traditional CTMC (\emph{Continuous Time Markov Chain}) models of discrete trait substitution, with application to hominin dental variation
+\item layering a \textbf{high-dimensional probit model atop mvBM to accommodate discrete traits} and comparing it with both more traditional and novel CTMC (\emph{Continuous Time Markov Chain}) models of discrete trait substitution, with application to human dental variation
 
 \end{itemize}
 
@@ -132,7 +162,7 @@ Throughout my PhD, I've undertaken a number of side projects, some of which dire
 
 \begin{itemize}[noitemsep]
 
-\item high-dimensional multilevel generalized linear mixed models (GLMMs; Poisson, in this case) in Stan to \textbf{heart transplant patient immune response} data both before and after an acute rejection episode
+\item high-dimensional multilevel generalized linear mixed models (GLMMs; Gamma-Poisson, in this case) in Stan to \textbf{heart transplant patient immune response} data both before and after an acute rejection episode
 \item multilevel GLMMs in Stan to \textbf{consumer dietary and attitudinal response datasets} (zero-inflated Poisson and ordered logit, respectively) measuring the effects of exposure to a relevant advertisement urging dietary change
 \item a hierarchical univariate Ornstein-Uhlenbeck model in Stan to the `evolution' of \textbf{nitrogen concentrations in manure ponds} across California to predict values after an arbitrary amount of time has passed in an arbitrary pond
 \item an efficient, conditional multivariate normal model in R that provides \textbf{personalized movie rating predictions} (given ratings for some movies and a large-but-sparse dataset of user reviews, what are the expected ratings and variances of unrated movies?) using probit and logit-normal transforms, exploiting basic properties of Schur complements
@@ -141,26 +171,25 @@ Throughout my PhD, I've undertaken a number of side projects, some of which dire
 \end{itemize}
 
 \subsection{Minor Projects}
-I've written many dozens of minor scripts ($<100$ LOC) devoted to data visualization, text mining, web scraping, replicating published analyses or algorithms from scratch, and exploring off-the-cuff ideas proposed by myself or colleagues.
+I've written many dozens of minor scripts ($<100$ LOC) devoted to data visualization, text mining, web scraping, animation, replicating published analyses or algorithms from scratch, and exploring off-the-cuff ideas proposed by myself or colleagues.
 
 I've also consulted individuals \& organizations in a minor role (e.g. over a $\sim 1$h meeting) on many additional projects throughout graduate school.
 
 \subsection{Field \& Labwork}
 
-\textbf{Archaeological / Paleontological Excavator} \hfill \emph{2013}\\
+\textbf{Archaeological / Paleontological Excavation} \hfill \emph{2013}\\
 During the Summer 2013 field season I helped in excavation efforts ongoing at La Ferrassie, a Neandertal archaeological and paleontological site in Savignac-de-Miremont, France
 
-
-\textbf{Water Quality Analyst} \hfill \emph{2011}\\
+\textbf{Water Quality Analysis} \hfill \emph{2011}\\
 I performed water quality analyses (of salinity, reactive nitrogen concentration, etc.) of a large set of streams distributed across the North Island of New Zealand
 
-\textbf{Stable Isotope Ecologist} \hfill \emph{2012 - 2013}\\
-As an undergraduate researcher, I examined how environmental and ecological conditions were recorded in enamel stable isotope ratios (carbon and oxygen) and dental microwear textures for several marsupial taxa throughout Australasia
+\textbf{Stable Isotope Ecology} \hfill \emph{2012 - 2013}\\
+As an undergraduate researcher, I examined how environmental and ecological conditions were recorded in enamel stable isotope ratios (carbon and oxygen) and dental microwear textures for several marsupial taxa throughout Australasia\\
 
 \section{Teaching}
 
 \textbf{Associate Instructor$^{*}$}, University of California, Davis \hfill \emph{2015  - 2020}\\
-As an associate instructor, I’ve taught three quarters of an upper-division paleoanthropology course, two quarters of an upper-division evolutionary primatology course, and one quarter of an introductory course on human evolution. In these roles, I created or modified all the lab and lecture materials, designed and graded assignments and tests, mentored individual students, delivered lectures, and either supervised teaching assistants or administered and oversaw the labs
+As instructor-of-record, I’ve taught three quarters of an upper-division paleoanthropology course, two quarters of an upper-division evolutionary primatology course, and one quarter of an introductory course on human evolution. In these roles, I created or modified all the lab and lecture materials, designed and graded assignments and tests, mentored individual students, delivered lectures, and either supervised teaching assistants or administered and oversaw the labs
 
 \textbf{Teaching Assistant$^{*}$}, University of California, Davis \& Vanderbilt University \hfill \emph{2012  - 2020}\\
 I have taught a total of 14 discussion sections for the aforementioned human evolution and paleoanthropology courses (see above), as well as the lab for an introductory cell biology course at Vanderbilt University. As a TA, I occasionally gave guest lectures on various subjects (mostly statistical phylogenetics)
@@ -179,8 +208,8 @@ $^{*}$\emph{student evaluations available upon request}
 
 \textbf{Founder \& Lead}, Applied Bayesian Statistics Research Cluster \hfill \emph{2019 - 2020}\\
 I founded, coordinated, and supervised an interdisciplinary research cluster of 70+ scientists and statisticians across numerous career stages (PhD Student, Postdoc, PI, Industry Researcher), financially and spiritually sponsored by the UC-Davis \emph{Data Science \& Informatics} Unit\\\\
-\textbf{Director}, Board of Directors, Wild Animal Initiative \hfill \emph{2020}\\
-I serve on the Board of Directors at the \textit{Wild Animal Initiative}, a non-profit dedicated to researching the lives of wild animals. In this role, I help to oversee the organization's activities and policies as described in their mission statement and bylaws\\\\
+\textbf{Director}, Board of Directors, Wild Animal Initiative \hfill \emph{2020-Present}\\
+I serve on the Board of Directors at the \textit{Wild Animal Initiative}, a non-profit dedicated to researching the lives of wild animals. In this role, I help to oversee the organization's activities and policies as described in their mission statement and bylaws, as well as approve financial decisions. Currently, I also serve on the DEI and Science committees\\\\
 \textbf{Coordinator}, Various Reading Groups \hfill \emph{2014 - 2020}\\
 I've founded and coordinated reading groups on Python, Applied Linear Algebra, Bayesian Data Analysis, and Deep Learning\\
 %\textbf{Undergraduate Student Mentor}, UC-Davis \hfill \emph{2014 - 2020}\\
@@ -207,6 +236,7 @@ I've founded and coordinated reading groups on Python, Applied Linear Algebra, B
 \end{enumerate}
 
 
+
 \subsection{Conference Presentations}
 
 \begin{enumerate}[label={[\arabic*]}]
@@ -223,6 +253,9 @@ I've founded and coordinated reading groups on Python, Applied Linear Algebra, B
 \end{enumerate}
 
 \vspace{-0.35em}
+
+\newpage
+
 \section{Grants \& Awards}
 
 \textbf{Excellence in Data Science Community Training and Outreach}\hfill \emph{2019, 2020}\\
@@ -241,13 +274,6 @@ I've founded and coordinated reading groups on Python, Applied Linear Algebra, B
 
 
 \vspace{-0.35em}
-
-\section{Service}
-
-\subsection{Journal Article Review}
-
-\emph{Science Communications} (2018)\\
-\emph{Evolution} (2017)
 
 
 
