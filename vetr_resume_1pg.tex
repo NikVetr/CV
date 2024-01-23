@@ -27,10 +27,16 @@
 
 %\renewcommand{\familydefault}{\sfdefault}
 
+% Redefine the fullline command to change the line color
+\def\fullline{%
+  \nointerlineskip % so I have this code
+  \moveleft\hoffset\vbox{\color{white}\hrule width\textwidth} % Change 'Red' to your desired color
+  \nointerlineskip
+}
 
 \begin{document}
 
-\name{\huge \textcolor{DarkRed}{Nikolai G. Vetr}}
+\name{\huge \textcolor{DarkRed}{Nikolai G. Vetr \hfill}}
 \begin{resume}
 \vspace{-5mm}
 \section{\mysidestyle Contact\\Information}
@@ -67,8 +73,8 @@ Abell, N., \textbf{Vetr, N.*},  Montgomery, S., et al.  2024.  \emph{A Survey of
 \vspace{-1.5mm}
 \section{\large\textcolor{DarkRed}{Leadership}}
 \textbf{Founder}, Applied Bayesian Statistics Research Cluster, \textit{UC-Davis} \hfill \emph{2019 - 2020}\\
-\textbf{President}, Board of Directors, \textit{\href{https://www.wildanimalinitiative.org/}{Wild Animal Initiative}} \hfill \emph{2020-Present}\\
-\textbf{President}, Board of Directors, \textit{\href{https://rethinkpriorities.org/}{Rethink Priorities}} \hfill \emph{2023-Present}\\
+\textbf{President}, Board of Directors, \textit{\href{https://www.wildanimalinitiative.org/}{Wild Animal Initiative}} \hfill \emph{2020 - Present}\\
+\textbf{President}, Board of Directors, \textit{\href{https://rethinkpriorities.org/}{Rethink Priorities}} \hfill \emph{2023 - Present}\\
 
 \vspace{-5mm}
 \section{\large\textcolor{DarkRed}{Languages}}
