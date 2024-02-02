@@ -148,7 +148,9 @@ My postdoctoral work in the Montgomery Lab focuses on exploring and developing s
 
 \item Integrating GWAS and eQTL mapping results with transcriptomic, proteomic, and ATAC-seq data to help \textbf{identify the molecular transducers of physical activity} through the MoTrPAC Consortium [\href{https://github.com/NikVetr/MoTrPAC\_Complex\_Traits}{LINK}]
 
-\item Understanding genomic influences on \textbf{allele-specific expression in the context of ovarian cancer} through the course of tumor development [\href{https://github.com/nsabell/egtex-ase}{LINK}]
+\item Streamlining the Bayesian workflow by creating text-processing utilities to \textbf{deterministically translate Stan code to R} (or other interpreted languages), allowing for dynamic exploration of model structure and easier automated acquisition of posterior predictive probabilities or distributions (for simulation experiments, or to assess observation-specific goodness of fit) [\href{ https://github.com/NikVetr/montgomery\_lab/blob/master/parse\_Stan.R }{LINK}]
+
+\item Designing novel probability models to infer differential \textbf{allele-specific expression patterns linked to ovarian cancer} throughout the course of tumor development using data from mmPCR-seq [\href{https://github.com/nsabell/egtex-ase}{LINK}]
 
 \item Developing \textbf{integrative methods to link multiomic response with trait expression} that appropriately propagate upstream inferential uncertainty [\href{https://github.com/NikVetr/papers/blob/main/twas-method/proposed\_TWAS\_method.pdf}{LINK}]
 
@@ -176,7 +178,7 @@ My dissertation work primarily centered on Bayesian computational phylogenetics 
 
 \begin{itemize}[noitemsep]
 
-\item through simulation \textbf{exploring the informativeness and reliability of continuous character alignments} at retrieval of simulating tree topology, with subsequent application to a craniometric dataset 
+\item through simulation experiments, \textbf{exploring the informativeness and reliability of continuous character alignments} at retrieval of simulating tree topology, with subsequent application to a craniometric dataset 
 \item the \textbf{effects of model misspecification} in the above, both with respect to the evolutionary process and with respect to accommodating missing data and measurement error
 \item developing and implementing novel optimizations to \textbf{reduce the time complexity} of likelihood calculation under the phylogenetic mvBM model from O($n^3$) to O($n^2$), modularizing particular operations to \textbf{avoid redundant computation} during Met-Hastings, and inventing substantially \textbf{more efficient, tunable proposal distributions} over correlation matrices of arbitrary dimensionality while inherently respecting PSD constraints. In total, \textbf{reducing the runtime required} to fit this popular evolutionary model under typical empirical conditions from months to hours
 \item \textbf{comparing model-based phylogenetic methods to more common heuristic (maximum parsimony, distance) methods}, both in simulation and empirically (using ape and old-world monkey datasets), and contrasting their performance to methods that use molecular (e.g. nucleotide sequence) data
@@ -203,21 +205,29 @@ In addition to the above dissertation contents, parallel work involving related 
 %[\href{}{LINK}, \href{}{example}]
 
 \subsection{Personal Projects}
-I've written many dozens of one-off scripts devoted to data visualization, text mining, web scraping, animation, replicating published analyses or algorithms from scratch, generating artwork, solving everyday diffuclties, and exploring off-the-cuff ideas proposed by myself or colleagues.
+I've written many dozens of one-off scripts devoted to data visualization, text mining, web scraping, animation, replicating published analyses or algorithms from scratch, generating artwork, solving everyday difficulties, and exploring off-the-cuff ideas proposed by myself or colleagues. Sometimes these require the flexibility of implementing everything from scratch, sometimes I'm able to make do with glueing a bunch of API calls together.
 
 Recent examples here include but are not limited to:
 
 \begin{itemize}[noitemsep]
 
-\item Leveraging wavelets and other transforms to \textbf{compress and vectorize raster images} [\href{https://github.com/NikVetr/minor_scripts/blob/c8926965b0c6dd9158351cf5836cbc76261f6830/postdoc/vectorize\_raster\_image.R}{LINK}, \href{https://drive.google.com/file/d/1rrEjdL13qZZIi22Pe5IkbUJKjPmpPpP5}{example}], with initial attempts to expand into higher dimensional spaces (eg time or 3D objects) [\href{https://github.com/NikVetr/minor_scripts/blob/c8926965b0c6dd9158351cf5836cbc76261f6830/postdoc/interpolate\_signature\_frequency\_series.R}{LINK}, \href{https://drive.google.com/file/d/1IDgm04h0LEZc4IXOPjqBheifsz2Y6ZmW}{example}]
+\item Exploring the space of valid crossword puzzles via MCMC to \textbf{generate crosswords that adhere to specific shapes determined by a user-specified images} (and hints  \texttt{+} answers) [\href{https://github.com/NikVetr/minor\_scripts/blob/master/postdoc/crossword\_generator.R}{LINK}, \href{https://drive.google.com/file/d/1E60FUROV3jh9OK-eIIt5cu\_z9CEeDO66}{example}]
 
-\item Automated \textbf{infilling and text-wrapping} of arbitrary images with arbitrary text [\href{https://github.com/NikVetr/minor_scripts/blob/c8926965b0c6dd9158351cf5836cbc76261f6830/postdoc/text\_to\_image.R}{LINK}, \href{https://drive.google.com/file/d/1cedbUpq8ArDd4fnjxUZBHlSLuVqsI7UO}{example}]
+\item Implementing on AWS a \textbf{multimodal, SMS-based chat assistant} for family not quite able to operate browser- or app-based interfaces, but very familiar with sending text messages [\href{https://github.com/NikVetr/minor\_scripts/blob/master/postdoc/email\_gma\_chatGPT-clone.py}{LINK}
 
-\item Automated \textbf{processing and overlay of in/outpainted images} [\href{https://github.com/NikVetr/minor_scripts/blob/c8926965b0c6dd9158351cf5836cbc76261f6830/postdoc/dall-e2\_zoomout.R}{LINK}, \href{https://drive.google.com/file/d/1nuvGY8d3h9qYeh9NrWVbo9ybkt0RdORn}{example}]
+\item As above, but instead of a chatGPT clone, hooking the API calls to a voice interface to create an admittedly high latency, \textbf{LLM-powered voice assistant} (not unlike Amazon Alexa or Google Home) to run on family computers.
 
-\item \textbf{Generating seating charts} under various (attitudinal, geographic) optimization criteria for an icebreaker activity, including in the multi-round iterated case where participants move [\href{https://github.com/NikVetr/minor_scripts/blob/c8926965b0c6dd9158351cf5836cbc76261f6830/postdoc/optimal_table_seating.R}{LINK}, \href{https://drive.google.com/file/d/1z-D3m9fd-hYQmAHGoDBl3N--k-udfTLb/view?usp=drive\_link}{example}]
+\item \textbf{Generating board (or other) meeting minutes from video recordings}, interleaving image-to-text output at the appropriate timestams extracted using temporal variance in multivariate picture heterogeneity, also incorporating speaker diarization methods to better identify who motioned this or seconded that [\href{https://github.com/NikVetr/minor\_scripts/blob/master/postdoc/generate\_meeting\_minutes.py}{LINK}
 
-\item Making other \textbf{small animations} leveraging basic geometric and linear algebraical operations [\href{https://github.com/NikVetr/minor_scripts/blob/c8926965b0c6dd9158351cf5836cbc76261f6830/postdoc/polygon\_animation.r}{LINK}, \href{https://drive.google.com/file/d/1BCUmNXSr2ST00JxM32t7qBhQXMZEZERv}{example}]
+\item Leveraging wavelets and other transforms to \textbf{compress and vectorize raster images} [\href{https://github.com/NikVetr/minor\_scripts/blob/c8926965b0c6dd9158351cf5836cbc76261f6830/postdoc/vectorize\_raster\_image.R}{LINK}, \href{https://drive.google.com/file/d/1rrEjdL13qZZIi22Pe5IkbUJKjPmpPpP5}{example}], with initial attempts to expand into higher dimensional spaces (eg time or 3D objects) [\href{https://github.com/NikVetr/minor\_scripts/blob/c8926965b0c6dd9158351cf5836cbc76261f6830/postdoc/interpolate\_signature\_frequency\_series.R}{LINK}, \href{https://drive.google.com/file/d/1IDgm04h0LEZc4IXOPjqBheifsz2Y6ZmW}{example}]
+
+\item Automated \textbf{infilling and text-wrapping} of arbitrary images with arbitrary text [\href{https://github.com/NikVetr/minor\_scripts/blob/c8926965b0c6dd9158351cf5836cbc76261f6830/postdoc/text\_to\_image.R}{LINK}, \href{https://drive.google.com/file/d/1cedbUpq8ArDd4fnjxUZBHlSLuVqsI7UO}{example}]
+
+\item Automated \textbf{processing and overlay of in/outpainted images} [\href{https://github.com/NikVetr/minor\_scripts/blob/c8926965b0c6dd9158351cf5836cbc76261f6830/postdoc/dall-e2\_zoomout.R}{LINK}, \href{https://drive.google.com/file/d/1nuvGY8d3h9qYeh9NrWVbo9ybkt0RdORn}{example}]
+
+\item \textbf{Generating seating charts} under various (attitudinal, geographic) optimization criteria for an icebreaker activity, including in the multi-round iterated case where participants move [\href{https://github.com/NikVetr/minor\_scripts/blob/c8926965b0c6dd9158351cf5836cbc76261f6830/postdoc/optimal_table_seating.R}{LINK}, \href{https://drive.google.com/file/d/1z-D3m9fd-hYQmAHGoDBl3N--k-udfTLb/view?usp=drive\_link}{example}]
+
+\item Making other \textbf{small animations} leveraging basic geometric and linear algebraical operations [\href{https://github.com/NikVetr/minor\_scripts/blob/c8926965b0c6dd9158351cf5836cbc76261f6830/postdoc/polygon\_animation.r}{LINK}, \href{https://drive.google.com/file/d/1BCUmNXSr2ST00JxM32t7qBhQXMZEZERv}{example}]
 
 \item Fitting multilevel GLMMs in Stan to \textbf{consumer dietary and attitudinal response datasets} (zero-inflated Poisson and ordered logit, respectively) measuring the effects of exposure to a relevant advertisement urging dietary change [\href{https://github.com/NikVetr/side\_projects/blob/24f7e38876a95433364123441f9b41d260105be6/MFA_Ads.R}{LINK}]
 
