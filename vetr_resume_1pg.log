@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.4.7)  20 MAY 2024 13:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.4.7)  26 MAY 2024 07:47
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -415,10 +415,10 @@ sr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr
 /local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/l
 ocal/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/lo
 cal/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on vetr_resume_1pg.pdf (1 page, 116301 bytes).
+Output written on vetr_resume_1pg.pdf (1 page, 116287 bytes).
 PDF statistics:
- 58 PDF objects out of 1000 (max. 8388607)
- 45 compressed objects within 1 object stream
+ 57 PDF objects out of 1000 (max. 8388607)
+ 44 compressed objects within 1 object stream
  2 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
