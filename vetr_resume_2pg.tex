@@ -1,0 +1,186 @@
+\documentclass[11pt,margin,line]{resume}
+
+\usepackage[svgnames]{xcolor}
+\usepackage[hidelinks]{hyperref}
+\usepackage{enumitem}
+\usepackage{verbatim} 
+\usepackage{avant}
+\usepackage{soul}
+\usepackage{multicol}
+\usepackage{lipsum}% dummy text
+
+
+%\setlength{\columnseprule}{0.4pt}
+\setuldepth{Heart}
+\setlist[itemize]{leftmargin=*}
+\renewcommand\labelitemi{\textbf{$-$}}
+
+%\addtolength{\oddsidemargin}{0in}
+%\addtolength{\evensidemargin}{0in}
+\addtolength{\textwidth}{.1in}
+%\addtolength{\topmargin}{0in}
+\addtolength{\textheight}{-0.75in}
+
+
+%change spacing of red section text to main by modifying
+%\def\ds@margin{\ifx\@@section\relax\newsectionwidth{1.0in}\let\@@section\boxed@sectiontitle\fi}
+%in resume.cls
+
+%\renewcommand{\familydefault}{\sfdefault}
+
+% Redefine the fullline command to change the line color
+\def\fullline{%
+  \nointerlineskip % so I have this code
+  \moveleft\hoffset\vbox{\color{white}\hrule width\textwidth} % Change 'Red' to your desired color
+  \nointerlineskip
+}
+
+\begin{document}
+
+\name{\huge \textcolor{DarkRed}{Nikolai G. Vetr, PhD \hfill}}
+\begin{resume}
+\vspace{-5mm}
+\section{\mysidestyle Contact\\Information}
+    \textbf{Phone}: \href{tel:+16025789196}{\color{blue}(602) 578-9196}       \hfill \textbf{LinkedIn}: \href{https://www.linkedin.com/in/nikolai-vetr}{\color{blue}linkedin.com/in/nikolai-vetr} \\
+\noindent \textbf{Email}: \href{mailto:nikgvetr@stanford.edu}{\color{blue}nikgvetr@stanford.edu}  \hfill \textbf{GitHub}: \href{https://www.github.com/NikVetr/}{\color{blue}github.com/NikVetr/} \vspace{0mm}\\\vspace{-2.5mm}
+
+
+\section{\large\textcolor{DarkRed}{Skills \& Interests}}
+
+\vspace{-0.0mm}
+\begin{multicols}{3}
+    \begin{itemize}
+    \setlength\itemsep{-0.2em}
+         \item Probability Modeling
+         \item Multiomic Data Analysis
+	 \item Time Series Modeling
+	 \item Bayesian Methods
+         \item Monte Carlo Methods
+         \item Causal Inference
+         \item Computer Vision
+         \item Artificial Neural Networks
+         \item Machine Learning
+         \item Optimization Methods
+         \item Science Communication
+         \item Nat. Lang. Processing
+         \item Evolutionary Biology
+         \item Exercise Biology
+         \item Population Genetics
+         \item Data Visualization
+         \item High Perf. Computing
+         \item Biomedical Data Science
+         
+    \end{itemize}
+    \end{multicols}\vspace{-5mm}
+
+\section{\large\textcolor{DarkRed}{Recent Papers}}
+
+Abell, N., \textbf{Vetr, N.*},  Montgomery, S., et al.  2024.  \emph{A Survey of High Depth Allele-Specific Expression Across Normal Tissues and Ovarian Cancers}.  In Prep.
+
+\textbf{Vetr, N.},  Gay,  N.,  and Montgomery,  S.  2024.  \emph{The impact of exercise on gene regulation in association with complex trait genetics}.  Nature Communications 15(3346): 1-14. DOI: \href{https://doi.org/10.1038/s41467-024-45966-w}{\color{blue}10.1038/s41467-024-45966-w.}
+
+\textbf{MoTrPAC Study Group}$^{\dag}$. 2024.  \emph{Temporal dynamics of the multi-omic response to endurance exercise training across tissues}.  Nature 629(8010): 174-183. DOI: \href{https://doi.org/10.1038/s41586-023-06877-w}{\color{blue}10.1038/s41586-023-06877-w.}
+
+Gates, K., Panicker, A., Biendarra-Tiegs, S., \textbf{Vetr, N.}, et al.  \emph{Shotgun Immunoproteomics for Identification of Nonhuman Leukocyte Antigens Associated With Cellular Dysfunction in Heart Transplant Rejection}. Transplantation 106(7). DOI: \href{https://pubmed.ncbi.nlm.nih.gov/34923540}{\color{blue}10.1097/TP.0000000000004012}
+
+\vspace{-1.5mm}
+\makebox[\textwidth][r]{\small*\textit{dual first authorship}, $^{\dag}$\textit{Author Group: 2 (of 8)}}\\
+\makebox[\textwidth][r]{\textit{(see second page for a description of work)}}
+
+\vspace{-1.5mm}
+\section{\large\textcolor{DarkRed}{Leadership}}
+\textbf{Founder}, Applied Bayesian Statistics Research Cluster, \textit{UC-Davis} \hfill \emph{2019 - 2020}\\
+\textbf{President}, Board of Directors, \textit{\href{https://www.wildanimalinitiative.org/}{Wild Animal Initiative}} \hfill \emph{2020 - Present}\\
+\textbf{President}, Board of Directors, \textit{\href{https://rethinkpriorities.org/}{Rethink Priorities}} \hfill \emph{2023 - Present}\\
+
+\vspace{-5mm}
+\section{\large\textcolor{DarkRed}{Languages}}
+\textbf{Programming:} R, Stan, BASH, Python, C\texttt{\texttt{+}\texttt{+}}, CSS, HTML, JS\\
+\textbf{Natural:} Russian, English, Spanish
+
+
+\vspace{-1.5mm}
+\section{\large\textcolor{DarkRed}{Education  \& Training}}
+
+\textbf{Postdoc}, Montgomery Lab, Stanford University\hfill\emph{Current}\\
+Pathology \texttt{+} Genetics \texttt{+} Biomedical Data Science
+\vspace{-1em}\\
+
+\textbf{PhD}, University of California, Davis\hfill\emph{2020}\\
+Dissertation: \textit{Exploring and Extending Multivariate Brownian Diffusion Models\\\hspace*{22mm} of Phenotypic Evolution for Bayesian Phylogenetic Inference}\\
+Anthropology \texttt{+} Population Biology \texttt{+} Data Science \& Informatics
+\vspace{-1em}\\
+
+\textbf{BA}, Vanderbilt University\hfill\emph{2013}\\
+Earth \& Environmental Sciences \texttt{+} Ecology, Evolution \& Organismal Biology\\
+Departmental Honors, \textit{summa cum laude}\\
+\vspace{-1.5em}
+
+\vspace{-1.5mm}
+\section{\large\textcolor{DarkRed}{Teaching}}
+\textbf{Associate Instructor}, University of California, Davis \hfill \emph{2015  - 2020}
+\\Human Evolution \texttt{+} Primate Evolution \texttt{+} Human Evolutionary Biology
+\\\textbf{Carpentries Instructor}, Data \& Software Carpentries\hfill \emph{2019}
+\\\textbf{Course Coordinator}, Workshop in Applied Phylogenetics \hfill \emph{2019}
+
+\vspace{-1.5mm}
+\section{\large\textcolor{DarkRed}{Projects}}
+
+Previous \textbf{dissertation work} focused on computational methods development in Bayesian phylogenetics. This included developing:
+
+    \begin{itemize}
+
+    \setlength\itemsep{-0.2em}
+         \item  computational tricks (eg factorizations) to improve scaling of multivariate likelihood calculation
+         \item  efficient, tunable proposal distributions and informative (non-\textit{I} centered) prior distributions for correlation matrices (rank-one updates and downdates w/ Givens rotations to reduce Brownian rate matrix decomposition from O($n^3$) to O($n^2$))
+         \item extensive simulation experiments to systematically characterize the conditions under which proposed methods succeed and fail
+         \item novel data visualizations (eg \textit{cumulative average resolution} curves) to assist interpretation of the above
+         \item hybrid EM/MCMC approaches to reliably fit otherwise intractable multimodal models (eg phylogenetic diffusion \texttt{+} multivariate ordinal probit)
+         
+    \end{itemize}
+
+\vspace{-5mm}
+Current \textbf{postdoctoral work} focuses on probability modeling of multiomic dynamics in the biomedical context. Projects here include:
+
+    \begin{itemize}
+
+    \setlength\itemsep{-0.2em}
+         \item  extensive data analysis and figure generation for preclinical MoTrPAC landscape publication, including integrative proteomic \texttt{+} transcriptomic time series analysis, multiomic \& multitissue clustering \texttt{+} network analysis, batch effect adjustment, dimensionality reduction, and uncertainty / error propagation, among other work
+	\item developing novel causal inferential methods, effect standardization workflows, and complex trait enrichment methods, while also leveraging more conventional bioinformatic tools (eg for heritability enrichment)
+	\item performing principled, multilevel modeling of loss-of-heterozygosity and allele-specific expression in a multitissue dataset to identify signatures of ovarian cancer
+	\item developing meta-scientific tools to streamline common computational workflows (eg converting Stan models to interactive R code for predictive simulation, calibration analysis, outlier detection, etc.)
+	         
+    \end{itemize}
+
+\vspace{-5mm}
+Various \textbf{personal projects} leverage scientific and statistical computing workflows to achieve diverse aims. These have entailed writing programs that:
+
+    \begin{itemize}
+
+    \setlength\itemsep{-0.2em}
+    	\item adaptively compress and vectorize raster images using techniques from computer vision, signal processing, and graph theory
+        \item  generate custom crossword puzzles that conform to shapes derived from user-supplied pictures
+        \item glue together API calls to create a fully SMS-based, multimodal digital assistant
+        \item infill and text-wrap a passage of text within a user-specified image
+        \item efficiently predict user ratings and provide media recommendations for popular movies
+        \item interface with external software to assist in metalworking, woodworking, pen plotting, and other physical modification of objects
+	         
+    \end{itemize}
+
+\vspace{-1.5mm}
+\section{\large\textcolor{DarkRed}{Service}}
+\textbf{Journal Review}: \emph{Evolution} (2017),  \emph{Science Communications} (2018),  \emph{Cell Reports} (2021), \emph{Human Genetics and Genomics Advances} (2022)\\
+\textbf{Grant Review}: \emph{WAI Grants} (2021,  2022,  2023)
+
+\vspace{-1.5mm}
+\section{\large\textcolor{DarkRed}{Selected Grants \& Awards}}
+NIH T15\hfill \emph{2021}\\
+Excellence in Data Science Community Training and Outreach \hfill \emph{2019, 2020}\\
+Outstanding Graduate Student Teaching Award Nominee\hfill \emph{2016, 2019, 2020}\\
+1st Place Picnic Day Exhibit Award in “Secrets of Nature” Category\hfill \emph{2017}\\
+NSF Graduate Research Fellowship \hfill \emph{2015}\\
+
+
+
+\end{resume}
+\end{document}

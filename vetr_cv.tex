@@ -20,8 +20,6 @@
 \fancyfoot{}
 \renewcommand{\headrulewidth}{0pt}
 \fancyfoot[R]{\thepage/\pageref{LastPage}}
-
-\usepackage[hidelinks]{hyperref}
 \hypersetup{
   colorlinks,
   citecolor=Violet,
@@ -146,6 +144,8 @@ My postdoctoral work in the Montgomery Lab focuses on exploring and developing s
 
 \begin{itemize}[noitemsep]
 
+\item Exploring inferential performance of \textbf{sparse feature selection} methods under conditions of strong input interdependence [\href{https://github.com/NikVetr/minor\_scripts/blob/master/postdoc/sparse\_var\_selection\_test.R}{LINK}]
+
 \item Integrating GWAS and eQTL mapping results with transcriptomic, proteomic, and ATAC-seq data to help \textbf{identify the molecular transducers of physical activity} through the MoTrPAC Consortium [\href{https://github.com/NikVetr/MoTrPAC\_Complex\_Traits}{LINK}]
 
 \item Streamlining the Bayesian workflow by creating text-processing utilities to \textbf{deterministically translate Stan code to R} (or other interpreted languages), allowing for dynamic exploration of model structure and easier automated acquisition of posterior predictive probabilities or distributions (for simulation experiments, or to assess observation-specific goodness of fit) [\href{ https://github.com/NikVetr/montgomery\_lab/blob/master/parse\_Stan.R }{LINK}]
@@ -154,11 +154,17 @@ My postdoctoral work in the Montgomery Lab focuses on exploring and developing s
 
 \item Developing \textbf{integrative methods to link multiomic response with trait expression} that appropriately propagate upstream inferential uncertainty [\href{https://github.com/NikVetr/papers/blob/main/twas-method/proposed\_TWAS\_method.pdf}{LINK}]
 
+\item Fitting tractable \textbf{high-D interaction models involving multiple filtration steps} for false-negative aware tests of intersectionality  [\href{https://github.com/NikVetr/minor\_scripts/blob/master/postdoc/pipeline\_problems.R}{LINK}]
+
+\item Propagating inferential uncertainty to \textbf{mitigate 0-biasing effects of differential power} on estimates of interdependence  [\href{https://github.com/NikVetr/minor\_scripts/blob/master/postdoc/propagate\_uncertainty\_correlations.R}{LINK}]
+
 \item Hiearchically modeling the \textbf{temporal dynamics of whole-trancriptome expression data} following environmental perturbation using linear combinations of logistic functions to characterize temporal behavior in expected rates of gamma-poisson distributed read counts [\href{https://github.com/NikVetr/montgomery_lab/blob/61e2ac4b0fea0ee7f5bf31590a40378f0027264a/growth\_and\_decay\_processes.R#L8}{LINK}]
 
 \item Exploring causal inferential implications of \textbf{aging clocks} [\href{https://github.com/NikVetr/montgomery\_lab/blob/61e2ac4b0fea0ee7f5bf31590a40378f0027264a/collider\_effects\_on\_R2.R#L4}{LINK}, \href{https://drive.google.com/file/d/1AQU0YMVoYCEFuIICHGIXGxoXm6dj7HxY/view}{example}]
 
 \item Developing easy-to-use tools for \textbf{frequentist testing} of novel generative immune response models
+
+\item Developing and implementing a \textbf{dynamic request intake framework} atop Google Workspace with Google Apps Script to assist administrative staff with coordinating disparate requests with scaling group size
 
 \item Describing \textbf{novel informative correlation matrix distributions} for use in multivariate,  multilevel diffusion models [\href{https://github.com/NikVetr/dissertation\_work/blob/master/informative\_corrmat\_prior.R}{LINK}]
 
@@ -178,12 +184,12 @@ My dissertation work primarily centered on Bayesian computational phylogenetics 
 
 \begin{itemize}[noitemsep]
 
-\item through simulation experiments, \textbf{exploring the informativeness and reliability of continuous character alignments} at retrieval of simulating tree topology, with subsequent application to a craniometric dataset 
-\item the \textbf{effects of model misspecification} in the above, both with respect to the evolutionary process and with respect to accommodating missing data and measurement error
-\item developing and implementing novel optimizations to \textbf{reduce the time complexity} of likelihood calculation under the phylogenetic mvBM model from O($n^3$) to O($n^2$), modularizing particular operations to \textbf{avoid redundant computation} during Met-Hastings, and inventing substantially \textbf{more efficient, tunable proposal distributions} over correlation matrices of arbitrary dimensionality while inherently respecting PSD constraints. In total, \textbf{reducing the runtime required} to fit this popular evolutionary model under typical empirical conditions from months to hours
-\item \textbf{comparing model-based phylogenetic methods to more common heuristic (maximum parsimony, distance) methods}, both in simulation and empirically (using ape and old-world monkey datasets), and contrasting their performance to methods that use molecular (e.g. nucleotide sequence) data
-\item \textbf{joint inference of ancestral character states} in a monkey dataset, with additional theory development on imputing unobserved tip characters in a phylogenetically sensible way 
-\item layering a \textbf{high-dimensional probit model atop mvBM to accommodate discrete traits} and comparing it with both more traditional and novel CTMC (\emph{Continuous Time Markov Chain}) models of discrete trait substitution, with application to human dental variation
+\item Through simulation experiments, \textbf{exploring the informativeness and reliability of continuous character alignments} at retrieval of simulating tree topology, with subsequent application to a craniometric dataset 
+\item The \textbf{effects of model misspecification} in the above, both with respect to the evolutionary process and with respect to accommodating missing data and measurement error
+\item Developing and implementing novel optimizations to \textbf{reduce the time complexity} of likelihood calculation under the phylogenetic mvBM model from O($n^3$) to O($n^2$), modularizing particular operations to \textbf{avoid redundant computation} during Met-Hastings, and inventing substantially \textbf{more efficient, tunable proposal distributions} over correlation matrices of arbitrary dimensionality while inherently respecting PSD constraints. In total, \textbf{reducing the runtime required} to fit this popular evolutionary model under typical empirical conditions from months to hours
+\item \textbf{Comparing model-based phylogenetic methods to more common heuristic (maximum parsimony, distance) methods}, both in simulation and empirically (using ape and old-world monkey datasets), and contrasting their performance to methods that use molecular (e.g. nucleotide sequence) data
+\item \textbf{Joint inference of ancestral character states} in a monkey dataset, with additional theory development on imputing unobserved tip characters in a phylogenetically sensible way 
+\item Layering a \textbf{high-dimensional probit model atop mvBM to accommodate discrete traits} and comparing it with both more traditional and novel CTMC (\emph{Continuous Time Markov Chain}) models of discrete trait substitution, with application to human dental variation
 
 \end{itemize}
 
@@ -191,10 +197,10 @@ In addition to the above dissertation contents, parallel work involving related 
 
 \begin{itemize}[noitemsep]
 
-\item \textbf{comparison of morphological relaxed clock models} in a species-rich fish dataset whose tree height straddles the K-Pg boundary [\href{https://github.com/NikVetr/dissertation_work/blob/961baf0f64fe6139dc2c1723d37dcd4d51cbd16a/rateHeterogeneity\_DisparityThroughTime.R}{LINK}]
-\item \textbf{approximating truncated biogeographic diffusions using data augmentation} on phylogenies to sample migration histories while respecting (land, water) barriers to explore latitudinal / climactic drivers of morphological differentiation in modern humans [\href{https://github.com/NikVetr/dissertation\_work/blob/961baf0f64fe6139dc2c1723d37dcd4d51cbd16a/truncatedBMapprox.R}{LINK}]
-\item high-dimensional multilevel generalized linear mixed models (GLMMs; Gamma-Poisson, in this case) in Stan to \textbf{heart transplant patient immune response} data both before and after an acute rejection episode [\href{https://github.com/NikVetr/side\_projects/blob/master/multilevelPoisson.R}{LINK}]
-\item a hierarchical univariate Ornstein-Uhlenbeck model in Stan to the `evolution' of \textbf{nitrogen concentrations in manure ponds} across California to predict values after an arbitrary amount of time has passed in an arbitrary pond [\href{https://github.com/NikVetr/side_projects/blob/24f7e38876a95433364123441f9b41d260105be6/OUmodel\_manurePonds.R}{LINK}]
+\item \textbf{Comparison of morphological relaxed clock models} in a species-rich fish dataset whose tree height straddles the K-Pg boundary [\href{https://github.com/NikVetr/dissertation_work/blob/961baf0f64fe6139dc2c1723d37dcd4d51cbd16a/rateHeterogeneity\_DisparityThroughTime.R}{LINK}]
+\item \textbf{Approximating truncated biogeographic diffusions using data augmentation} on phylogenies to sample migration histories while respecting (land, water) barriers to explore latitudinal / climactic drivers of morphological differentiation in modern humans [\href{https://github.com/NikVetr/dissertation\_work/blob/961baf0f64fe6139dc2c1723d37dcd4d51cbd16a/truncatedBMapprox.R}{LINK}]
+\item High-dimensional multilevel generalized linear mixed models (GLMMs; Gamma-Poisson, in this case) in Stan to \textbf{heart transplant patient immune response} data both before and after an acute rejection episode [\href{https://github.com/NikVetr/side\_projects/blob/master/multilevelPoisson.R}{LINK}]
+\item A hierarchical univariate Ornstein-Uhlenbeck model in Stan to the `evolution' of \textbf{nitrogen concentrations in manure ponds} across California to predict values after an arbitrary amount of time has passed in an arbitrary pond [\href{https://github.com/NikVetr/side_projects/blob/24f7e38876a95433364123441f9b41d260105be6/OUmodel\_manurePonds.R}{LINK}]
 
 \end{itemize}
 
@@ -226,6 +232,10 @@ Recent examples here include but are not limited to:
 \item Automated \textbf{processing and overlay of in/outpainted images} [\href{https://github.com/NikVetr/minor\_scripts/blob/c8926965b0c6dd9158351cf5836cbc76261f6830/postdoc/dall-e2\_zoomout.R}{LINK}, \href{https://drive.google.com/file/d/1nuvGY8d3h9qYeh9NrWVbo9ybkt0RdORn}{example}]
 
 \item \textbf{Generating seating charts} under various (attitudinal, geographic) optimization criteria for an icebreaker activity, including in the multi-round iterated case where participants move [\href{https://github.com/NikVetr/minor\_scripts/blob/c8926965b0c6dd9158351cf5836cbc76261f6830/postdoc/optimal_table_seating.R}{LINK}, \href{https://drive.google.com/file/d/1z-D3m9fd-hYQmAHGoDBl3N--k-udfTLb/view?usp=drive\_link}{example}]
+
+\item \textbf{Generating walking directions} using graph operations and API calls that prioritize other weighted criteria besides time to destination (eg regularly spaced amenities, density of PoI, beauty as proxied by Flickr geolocated metadata, etc.) [WiP]
+
+\item \textbf{Generating laser cutter input files} for parallel tag / fob creation (to tag deboxed boardgames, provide custom swag, create 3D engravings by discretizing depth maps, etc.) [WiP, \href{https://github.com/NikVetr/minor\_scripts/blob/master/postdoc/draw\_lasercutter\_input.R}{LINK}]
 
 \item Making other \textbf{small animations} leveraging basic geometric and linear algebraical operations [\href{https://github.com/NikVetr/minor\_scripts/blob/c8926965b0c6dd9158351cf5836cbc76261f6830/postdoc/polygon\_animation.r}{LINK}, \href{https://drive.google.com/file/d/1BCUmNXSr2ST00JxM32t7qBhQXMZEZERv}{example}]
 
@@ -301,8 +311,6 @@ $^{\dag}$\textit{Author Group: 2 (of 8)}
 
 \end{enumerate}
 
-
-
 \subsection{Conference Presentations}
 
 \begin{enumerate}[label={[\arabic*]}]
@@ -312,8 +320,6 @@ $^{\dag}$\textit{Author Group: 2 (of 8)}
 \item \textbf{Vetr, N}., Gay, N., and S. Montgomery. 2022. \emph{Integrating Exercise-Induced Gene Expression and Human Phenotypic Variation}. Poster session presented at NIH-NLM T15 Training Conference 2022.
 
 \item \textbf{Vetr, N}., May, M. Moore, B., and T. Weaver. 2018. \emph{Adapting multivariate Brownian diffusion models to Bayesian inference of human population history and phylogeny}. Oral session presented at the 87th Annual Meeting of the American Association of Physical Anthropologists.
-
-\item Desantis, L., \textbf{Lashinsky, N}., Romer, J., Greshko, M., and Loffredo, L. 2013. \emph{University Students' Acceptance of Climate Change and Evolution: Are Skeptics just Anti- Science?} Poster presented despite second authorship at the 73rd Annual Meeting of the Society of Vertebrate Paleontology. 
 
 \item \textbf{Lashinsky, N}., DeSantis, L. Yann, S. Donohue, and R. Haupt. 2013. \emph{Is Rapoport’s Rule a Recent Phenomenon? A Deep Time Perspective on Potential Causal Mechanisms}. Oral session presented at the 73rd Annual Meeting of the Society of Vertebrate Paleontology. 
 
