@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.4.7)  29 MAY 2024 12:18
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.4.7)  6 JUN 2024 10:34
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -496,26 +496,31 @@ n/12 high-D in-ter-ac-tion mod-els in-volv-ing mul-ti-ple fil-tra-tion steps \O
 T1/LinuxLibertineT-TLF/m/n/12 for false-negative
  []
 
-[2] [3] [4] [5]
-Underfull \hbox (badness 10000) in paragraph at lines 335--349
+[2] [3] [4] [5] [6]
+Underfull \hbox (badness 10000) in paragraph at lines 340--341
 
  []
 
-[6] 
+
+Underfull \hbox (badness 10000) in paragraph at lines 348--362
+
+ []
+
+
 AED: lastpage setting LastPage
 [7]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 363.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 363.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 376.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 376.
  (./vetr_cv.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 363.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 363.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 376.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 376.
 Package rerunfilecheck Info: File `vetr_cv.out' has not changed.
 (rerunfilecheck)             Checksum: 5C1222C46D242D34C0ED549B721A3229;971.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 363.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 376.
  ) 
 Here is how much of TeX's memory you used:
- 8660 strings out of 480608
- 138532 string characters out of 5903631
+ 8665 strings out of 480608
+ 138567 string characters out of 5903631
  433389 words of memory out of 5000000
  24354 multiletter control sequences out of 15000+600000
  549933 words of font info for 52 fonts, out of 8000000 for 9000
@@ -537,10 +542,10 @@ m/cmr12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/
 cmr8.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cms
 y10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
 8.pfb>
-Output written on vetr_cv.pdf (7 pages, 357427 bytes).
+Output written on vetr_cv.pdf (7 pages, 360379 bytes).
 PDF statistics:
- 242 PDF objects out of 1000 (max. 8388607)
- 221 compressed objects within 3 object streams
- 39 named destinations out of 1000 (max. 500000)
+ 248 PDF objects out of 1000 (max. 8388607)
+ 227 compressed objects within 3 object streams
+ 44 named destinations out of 1000 (max. 500000)
  137 words of extra memory for PDF output out of 10000 (max. 10000000)
 
