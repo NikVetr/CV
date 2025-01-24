@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Set the filenames
-resume="vetr_resume_2pg.pdf"
+resume="vetr_resume_1pg.pdf"
 cv="vetr_cv.pdf"
 blank="blank.pdf"
 output="vetr_resume+CV.pdf"
