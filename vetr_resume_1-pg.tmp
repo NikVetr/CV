@@ -1,11 +1,11 @@
-% vetr_cv.top
+% vetr_resume_1-pg.top
 \unprotect
 \def\MPOSTformatswitch{-progname=metafun -mem=}
-\setupsystem[\c!n=1,\c!m=1]
+\setupsystem[\c!n=2,\c!m=2]
 \setupsystem[\c!method=2]
 \setupsystem[\c!type=macosx]
-\setupsystem[\c!random=624]
-\setupsystem[inputfile=vetr_cv.tex]
+\setupsystem[\c!random=164]
+\setupsystem[inputfile=vetr_resume_1-pg.tex]
 \startsetups *runtime:options
 \setupoutput[xetex]
 \stopsetups

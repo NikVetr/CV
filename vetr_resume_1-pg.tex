@@ -1,0 +1,303 @@
+\documentclass[10pt, letterpaper]{article}
+
+% Packages:
+\usepackage[
+    ignoreheadfoot, % set margins without considering header and footer
+    top=1.5 cm, % reduced top margin slightly
+    bottom=1.25 cm, % reduced bottom margin slightly
+    left=1.75 cm, % reduced left margin slightly
+    right=1.75 cm, % reduced right margin slightly
+    footskip=1.0 cm, % seperation between body and footer
+    % showframe % for debugging
+]{geometry} % for adjusting page geometry
+\usepackage[explicit]{titlesec} % for customizing section titles
+\usepackage{tabularx} % for making tables with fixed width columns
+\usepackage{array} % tabularx requires this
+\usepackage[dvipsnames, svgnames]{xcolor} % for coloring text, added svgnames
+\definecolor{primaryColor}{RGB}{139, 0, 0} % DarkRed color for consistency with previous resume
+\definecolor{secondaryColor}{RGB}{69, 0, 0} % DarkRed color for consistency with previous resume
+\usepackage{enumitem} % for customizing lists
+\usepackage{fontawesome5} % for using icons
+\usepackage{amsmath} % for math
+\usepackage[
+    pdftitle={Nikolai G. Vetr - Resume}, % Updated PDF Title
+    pdfauthor={Nikolai G. Vetr}, % Updated PDF Author
+    pdfcreator={LaTeX with RenderCV template},
+    colorlinks=true,
+    urlcolor=primaryColor % Use defined color for URLs
+]{hyperref} % for links, metadata and bookmarks
+\usepackage[pscoord]{eso-pic} % for floating text on the page
+\usepackage{calc} % for calculating lengths
+\usepackage{etoolbox}
+\usepackage{bookmark} % for bookmarks
+\usepackage{lastpage} % for getting the total number of pages
+\usepackage{changepage} % for one column entries (adjustwidth environment)
+\usepackage{paracol} % for two and three column entries
+\usepackage{ifthen} % for conditional statements
+\usepackage{needspace} % for avoiding page brake right after the section title
+\usepackage{iftex} % check if engine is pdflatex, xetex or luatex
+\usepackage{textcomp} % For symbols like C++
+
+% Ensure that generate pdf is machine readable/ATS parsable:
+\ifPDFTeX
+    \input{glyphtounicode}
+    \pdfgentounicode=1
+    \usepackage[T1]{fontenc}
+    \usepackage[utf8]{inputenc}
+    % \usepackage{lmodern} % Using Source Sans Pro instead
+\fi
+
+\usepackage[default, type1]{sourcesanspro} % Using Source Sans Pro font
+
+% Some settings:
+\AtBeginEnvironment{adjustwidth}{\partopsep0pt} % remove space before adjustwidth environment
+\pagestyle{empty} % no header or footer
+\setcounter{secnumdepth}{0} % no section numbering
+\setlength{\parindent}{0pt} % no indentation
+\setlength{\topskip}{0pt} % no top skip
+\setlength{\columnsep}{0.5cm} % adjusted column seperation slightly
+\makeatletter
+% \let\ps@customFooterStyle\ps@plain % Copy the plain style to customFooterStyle
+% \patchcmd{\ps@customFooterStyle}{\thepage}{
+%     \color{gray}\textit{\small Nikolai G. Vetr - Page \thepage{} of \pageref*{LastPage}} % Updated footer text
+% }{}{} % replace number by desired string
+% \makeatother
+% \pagestyle{customFooterStyle}
+
+\titleformat{\section}{
+    \needspace{4\baselineskip}
+    \Large\color{primaryColor}
+}{
+}{
+}{
+    \textbf{#1}\hspace{0.15cm}\titlerule[0.8pt]\hspace{-0.1cm}
+}[] % section title formatting
+
+\titlespacing{\section}{
+    -1pt % left space
+}{
+    0.3 cm % top space
+}{
+    0.2 cm % bottom space
+} % section title spacing
+
+% Environment for bullet points in entries
+\newenvironment{highlights}{
+    \begin{itemize}[
+        topsep=0.05 cm, % reduced spacing
+        parsep=0.05 cm, % reduced spacing
+        partopsep=0pt,
+        itemsep=0pt,
+        leftmargin=0.4 cm + 10pt, % Keep indent
+        label=\textbf{--} % Use bold dash like previous resume
+    ]
+}{
+    \end{itemize}
+}
+
+% Environment for one column entries (like summary, skills)
+\newenvironment{onecolentry}{
+    \begin{adjustwidth}{0.2 cm + 0.00001 cm}{0.2 cm + 0.00001 cm}
+}{
+    \end{adjustwidth}
+}
+
+% Environment for two column entries (Experience, Projects, Publications, Leadership)
+\newenvironment{twocolentry}[2][]{ % #1=optional, #2=right column content
+    \onecolentry
+    \def\secondColumn{#2}
+    \setcolumnwidth{\fill, 4.5 cm} % Adjust width of right column if needed
+    \begin{paracol}{2}
+}{
+    \switchcolumn \raggedleft \secondColumn
+    \end{paracol}
+    \endonecolentry
+}
+
+% Environment for three column entries (Education)
+\newenvironment{threecolentry}[3][]{ % #1=optional, #2=middle column, #3=right column
+    \onecolentry
+    \def\thirdColumn{#3}
+    \setcolumnwidth{0.5 cm, \fill, 1.0 cm} % Adjust widths if needed (e.g., 1st col for degree)
+    \begin{paracol}{3}
+    {\raggedright \textbf{#2}} \switchcolumn % Make middle column (degree) bold
+}{
+    \switchcolumn \raggedleft \thirdColumn
+    \end{paracol}
+    \endonecolentry
+}
+
+% Environment for the top header
+\newenvironment{header}{
+    \setlength{\topsep}{0pt}\par\kern\topsep\centering\color{black}\linespread{1.2} % Changed color to black for better readability
+}{
+    \par\kern\topsep
+}
+
+% Command to place "Last updated" text
+\newcommand{\placelastupdatedtext}[1]{% Takes date string as argument
+  \AddToShipoutPictureFG*{% Add text to current page foreground
+    \put(
+        \LenToUnit{\paperwidth-1.8 cm-0.2 cm+0.05cm}, % Adjusted for right margin
+        \LenToUnit{\paperheight-1.0 cm} % Position from top edge
+    ){\vtop{{\null}\makebox[0pt][r]{ % Align right
+        \small\color{gray}\textit{Last updated: #1} % Use argument
+    }}}%
+  }%
+}%
+
+% Save the original href command
+\let\hrefWithoutIcon\href
+% Redefine href to add icon for external web links, but not for mailto/tel
+\renewcommand{\href}[2]{%
+    \hrefWithoutIcon{#1}{\ifstrequal{#1}{mailto:}{\faEnvelope[regular]\hspace*{0.10cm}#2}{% Is it mailto?
+    \ifstrequal{#1}{tel:}{\faPhone*\hspace*{0.10cm}#2}{% Is it tel?
+    #2\raisebox{.10ex}{\footnotesize \kern 0.08em \faExternalLinkAlt}}% Otherwise, add icon
+    }}%
+}
+% Helper command to check prefix (needed for robust mailto/tel detection)
+\usepackage{xstring}
+\renewcommand{\href}[2]{%
+  \IfBeginWith{#1}{mailto:}%
+    {\hrefWithoutIcon{#1}{\faEnvelope[regular]\hspace*{0.10cm}#2}}%
+    {% No, check tel:
+      \IfBeginWith{#1}{tel:}%
+        {\hrefWithoutIcon{#1}{\faPhone*\hspace*{0.10cm}#2}}%
+        {% No, assume web link
+          \hrefWithoutIcon{#1}{#2\,\raisebox{.10ex}{\footnotesize\faExternalLinkAlt}}% Add icon
+        }%
+    }%
+}
+
+
+\begin{document}
+    % \placelastupdatedtext{October 2024} % Add current date here
+
+    % --- Header --- %
+    \begin{header}
+        % {\fontsize{28pt}{30pt}\textbf{Nikolai G. Vetr}} % Larger name, primary color
+    % --- Modified Name Line using \hrulefill ---
+        \noindent % Ensure we are not indented
+        \makebox[\linewidth]{%
+        \color{primaryColor}\rule[8pt]{0.3165\linewidth}{0.8pt} % Left rule
+        \normalcolor
+        \hspace{4pt}
+        {\fontsize{28pt}{30pt}\textbf{\color{secondaryColor}{Nikolai G. Vetr}}}
+        \hspace{2pt}
+        \color{primaryColor}\rule[8pt]{0.3165\linewidth}{0.8pt} % Right rule
+    }
+        \vspace{-0.4 cm} % Reduced space
+
+               \normalsize % Use normal size for contact info line
+        % Use mbox to keep items together, kern for spacing
+        % REMOVED Location line and its separator
+        \mbox{\hrefWithoutIcon{mailto:nikgvetr@stanford.edu}{{\footnotesize\faEnvelope[regular]}\hspace*{0.13cm}nikgvetr@stanford.edu}} % Mail without icon (NOW FIRST)
+        \kern 0.20 cm | \kern 0.20 cm % Adjusted kern spacing
+        \mbox{\hrefWithoutIcon{tel:+16025789196}{{\footnotesize\faPhone*}\hspace*{0.13cm}+1 (602) 578-9196}} % Phone without icon
+        \kern 0.20 cm | \kern 0.20 cm % Adjusted kern spacing
+        \mbox{\href{https://www.linkedin.com/in/nikolai-vetr}{{\footnotesize\faLinkedinIn}\hspace*{0.13cm}linkedin.com/in/nikolai-vetr}} % LinkedIn with icon (uses redefined href)
+        \kern 0.20 cm | \kern 0.20 cm % Adjusted kern spacing
+        \mbox{\href{https://www.github.com/NikVetr/}{{\footnotesize\faGithub}\hspace*{0.13cm}github.com/NikVetr}} % GitHub with icon (uses redefined href)
+        % \kern 0.20 cm | \kern 0.20 cm % Adjusted kern spacing
+        % ADDED Google Scholar using redefined href and correct icon
+        \mbox{\href{https://scholar.google.com/citations?user=pCetFNQAAAAJ&hl=en}{{\footnotesize\faGraduationCap}\hspace*{0.13cm}Nikolai Vetr}}
+        \kern 0.20 cm | \kern 0.20 cm % Adjusted kern spacing
+        \mbox{\href{https://github.com/NikVetr/CV/blob/master/vetr_cv.pdf}{{\footnotesize\faFilePdf}\hspace*{0.13cm}Full CV}} % CV with PDF icon
+        \kern 0.20 cm | \kern 0.20 cm % Adjusted kern spacing
+        \mbox{{\textcolor{primaryColor}{\footnotesize\faMapMarker}\hspace*{0.13cm}\textcolor{primaryColor}{San Francisco Bay Area}}}
+
+        
+    \end{header}
+
+    \vspace{-0.5 cm} % Fine-tune space after header
+
+    % --- Summary --- %
+    \section{Summary}
+        \begin{onecolentry}
+            Computational biologist and data scientist focused on Bayesian statistics, multi-omic data integration, and machine learning methods development. Extensive experience developing and evaluating novel statistical models and computational tools to address complex biological questions across varied domains.
+        \end{onecolentry}
+
+        % --- Education --- %
+    \section{Education}
+        \begin{threecolentry}{PhD}{
+            \textit{\textcolor{primaryColor}{2020}} % Italicize date
+        } % Degree in middle column, Date in right
+            \textbf{University of California, Davis}
+            \par\vspace{0.05cm}
+            \textit{Anthropology + Population Biology + Data Science \& Informatics}
+            \par\vspace{0.05cm}
+            Dissertation: ``\textit{Exploring and Extending Multivariate Brownian Diffusion Models of Phenotypic Evolution for}\\
+            \hspace*{10.5cm}\textit{Bayesian Phylogenetic Inference}''
+            % Optional: Add dissertation note here if desired
+        \end{threecolentry}
+
+        \vspace{-0.5 cm}
+
+        \begin{threecolentry}{BA}{
+             \textit{\textcolor{primaryColor}{2013}}
+        }
+            \textbf{Vanderbilt University}
+            \par\vspace{0.05cm}
+            \textit{Earth & Environmental Sciences + Ecology, Evolution \& Organismal Biology}
+            \begin{highlights} % Use highlights for honors
+                \item Departmental Honors, \textit{summa cum laude}
+            \end{highlights}
+        \end{threecolentry}
+    
+    \vspace{-0.0 cm}
+    \section{Experience}
+
+        % --- Stanford University --- (Most Recent)
+        \textbf{Stanford University} -- Postdoctoral Researcher \hfill \textit{\textcolor{primaryColor}{Stanford, CA \textbar{} 2020 -- Present}} \\ % Location/Date on same line, pushed right
+        \textit{Montgomery Lab (Pathology, Genetics, Biomedical Data Science)} % Lab info on next line
+        \begin{highlights} %distributed computing utility?
+            \item Integrated differential expression results with drug, perturbation target, and biobank databases with approx. 1TB of input data to provide causal inferential insights into the results of a large-scale animal experiment (\textit{Nat. Comms.}, 2024). 
+            \item Made key contributions to multi-omic analysis (GWAS, eQTL, transcriptomics, proteomics, ATAC-seq) of exercise response data for the MoTrPAC, identifying molecular transducers of physical activity (\textit{Nature}, 2024). 
+            \item Developed novel Bayesian probability models and analysis pipelines for differential allele-specific expression analysis in ovarian cancer using high-depth mmPCR-seq (\textit{ASHG}, 2024).
+            \item Derived and implemented powerful and efficient computational methods for Bayesian data analysis, including novel correlation matrix prior and proposal distributions, efficient model reparameterizations, and code translation utilities. Runtime improved by multiple orders of magnitude vs. conventional approaches on typical datasets.
+        \end{highlights}
+
+        \vspace{0.15 cm} % Manual space between entries
+
+        % --- Rethink Priorities --- (Ongoing Role)
+        \textbf{Rethink Priorities} -- Board President / Director \hfill \textit{\textcolor{primaryColor}{Global \textbar{} 2023 -- Present}} % Title is just President now
+        \begin{highlights}
+             \item Led Board of Directors for research non-profit focused on cause prioritization, overseeing strategic direction, executive performance, and financial governance, leveraging data modeling skills (eg time series of fundraising performance).
+             \item Provided statistical consulting on Bayesian modeling, causal inference, and data analysis for projects spanning GenAI, global health, survey response data, and computational biology. 
+         \end{highlights}
+
+        \vspace{0.15 cm} % Manual space between entries
+
+        % --- UC Davis --- (Past Role)
+        \textbf{University of California, Davis} -- Instructor / Consultant \hfill \textit{\textcolor{primaryColor}{Davis, CA \textbar{} 2015 -- 2020}} % Location/Date on same line
+        \begin{highlights}
+             \item Developed and delivered lectures, labs, and assessments for upper-division courses in Human and Primate Biology.
+             \item Founded and led interdisciplinary \textit{Applied Bayesian Statistics Research Cluster} (70+ members), providing training and consultation on Bayesian and Deep Learning methods to the academic research community.
+             \item Led workshops and served as a certified Carpentries instructor, teaching coding and data science skills to researchers.
+             \item Won multiple awards for biology and data science outreach activities; also nominated several times for Outstanding Instructor award.
+        \end{highlights}
+        % No vspace needed after the last entry in the section
+
+    % --- Skills --- %
+    \section{Technical Skills} % Renamed section
+        \begin{onecolentry}
+            \textbf{Programming:} R, Stan, BASH, Python, C\texttt{++}, JS, Git, AWS, RevBayes
+        \end{onecolentry}
+        \vspace{0.15 cm} % Minimal space between skill lines
+         \begin{onecolentry}
+            \textbf{Statistical / ML Methods:} Bayesian Inference, Monte Carlo Methods, Multilevel Models, GLMs / GLMMs, Time Series Analysis, Causal Inference, Optimization, Computer Vision, NLP, Measurement Error, Sparse Estimation, Outlier Detection, Signal Processing, Spatial Autocorrelation, Missing Data Imputation, ODEs, D/CTMCs \end{onecolentry}
+         \vspace{0.15 cm}
+         \begin{onecolentry}
+            \textbf{Bioinformatics:} Multi-omic Data Integration (Genomics, Transcriptomics, Proteomics, Epigenomics), Association Mapping, ASE Analysis, Population and Quantitative Genetics, Interactive / Dynamic Data Visualization, HPC
+        \end{onecolentry}
+         \vspace{0.15 cm}
+         \begin{onecolentry}
+            \textbf{Domain Knowledge:} Molecular Biology, Human Genetics, Exercise Physiology, Evolutionary Biology, Human Anatomy
+        \end{onecolentry}
+        \vspace{0.15 cm}
+         \begin{onecolentry}
+            \textbf{Languages:} English (Native), Russian (Native), Spanish (Proficient)
+        \end{onecolentry}
+
+        
+\end{document}

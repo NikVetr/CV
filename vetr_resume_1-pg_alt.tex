@@ -1,0 +1,120 @@
+\documentclass[11pt,margin,line]{resume}
+
+\usepackage[svgnames]{xcolor}
+\usepackage[hidelinks]{hyperref}
+\usepackage{enumitem}
+% \usepackage{verbatim} % Already included by resume.cls
+\usepackage{avant} % Using Avant Garde font
+% \usepackage{soul} % Might not be needed unless you use \ul, \so, etc.
+\usepackage{textcomp} % For symbols like C++
+
+% --- Margins and Layout --- %
+% Keep your custom layout settings
+\addtolength{\oddsidemargin}{-0.275in}
+\addtolength{\evensidemargin}{-0.25in}
+\addtolength{\textwidth}{.75in}
+\addtolength{\topmargin}{-0.225in}
+\addtolength{\textheight}{0.5in}
+
+% --- Style Customizations --- %
+\setlist[itemize]{leftmargin=*, label=\textbf{-}} % Indent bullets, use bold dash
+\renewcommand{\familydefault}{\sfdefault} % Use sans-serif font (Avant Garde specified)
+
+% Custom section title color (DarkRed)
+\renewcommand{\section}[1]{%
+  \vspace{0.8em \@plus 0.2em \@minus 0.2em}% changed \bigskipamount
+  \phantomsection{}% So hyperref creates bookmarks
+  {\raggedright \Large\bfseries\scshape\textcolor{DarkRed}{#1}}% SCshape for emphasis
+  \vspace{0.4em \@plus 0.1em \@minus 0.1em}% changed \medskipamount
+  \nopagebreak[3]% try to prevent page break after heading
+}
+
+% --- Document Start --- %
+\begin{document}
+
+% --- Header --- %
+\name{\huge \textcolor{DarkRed}{Nikolai G. Vetr \hfill}} % Keep name prominent
+\vspace{-6mm} % Adjust vertical space after name
+
+\begin{resume}
+
+% --- Contact Info --- %
+\section{\mysidestyle Contact\\Information} % Keep your sidebar style if 'resume.cls' supports it, otherwise remove \mysidestyle
+    \textbf{Phone}: \href{tel:+16025789196}{\color{blue}(602) 578-9196}       \hfill \textbf{LinkedIn}: \href{https://www.linkedin.com/in/nikolai-vetr}{\color{blue}linkedin.com/in/nikolai-vetr} \\
+    \textbf{Email}: \href{mailto:nikgvetr@stanford.edu}{\color{blue}nikgvetr@stanford.edu}  \hfill \textbf{GitHub}: \href{https://www.github.com/NikVetr/}{\color{blue}github.com/NikVetr/}
+\vspace{-3mm} % Reduce space after contact
+
+% --- Summary --- % Optional but Recommended
+\section{\textcolor{DarkRed}{Summary}}
+Computational biologist and data scientist with expertise in Bayesian statistics, multi-omics data integration (genomics, transcriptomics, proteomics), and bioinformatics pipeline development. Proven ability to develop novel statistical models and computational tools to address complex biological questions in areas including oncology, exercise physiology, and complex trait genetics. Seeking a Scientist/Senior Scientist role leveraging advanced quantitative skills to drive translational research in the Bay Area biotech sector.
+\vspace{-2mm} % Reduce space after summary
+
+% --- Experience --- % MOST IMPORTANT SECTION
+\section{\textcolor{DarkRed}{Experience}}
+
+\textbf{Postdoctoral Researcher} \hfill Stanford University \hfill \emph{2020 -- Present} \\
+\textit{Montgomery Lab (Pathology, Genetics, Biomedical Data Science)}
+\vspace{-1mm}
+\begin{itemize} \itemsep -0.5em % Reduce spacing between bullet points
+    \item Led multi-omic analysis (GWAS, eQTL, transcriptomics, proteomics, ATAC-seq) for the MoTrPAC consortium, identifying molecular transducers of physical activity and contributing to a \textit{Nature} publication. [\href{https://github.com/NikVetr/MoTrPAC_Complex_Traits}{Code}]
+    \item Developed novel Bayesian probability models and analysis pipelines to detect differential allele-specific expression (ASE) patterns linked to ovarian cancer progression using high-depth mmPCR-seq data. [\href{https://github.com/nsabell/egtex-ase}{Code}]
+    \item Designed and implemented Bayesian hierarchical models in Stan to characterize temporal dynamics of multi-omic responses (transcriptomics, proteomics) to exercise training across diverse tissues.
+    \item Created robust statistical methods and pipelines for integrating GWAS/QTL results with functional genomics data (e.g., TWAS-like methods) while appropriately propagating upstream uncertainty. [\href{https://github.com/NikVetr/papers/blob/main/twas-method/proposed_TWAS_method.pdf}{Method}]
+    \item Developed efficient computational methods, including novel correlation matrix priors and Stan-to-R translation utilities, streamlining Bayesian workflows and enabling analysis of high-dimensional datasets. [\href{https://github.com/NikVetr/montgomery_lab/blob/master/parse_Stan.R}{Utility}]
+    \item Investigated proteomic signatures of allogeneic renal transplant rejection using censored Poisson models and advanced statistical techniques.
+\end{itemize}
+\vspace{-2mm}
+
+% --- Selected Projects --- % Highlight specific technical achievements
+\section{\textcolor{DarkRed}{Selected Projects}}
+\vspace{-1mm}
+\begin{itemize} \itemsep -0.5em
+    \item \textbf{Phylogenetic Model Optimization:} Reduced time complexity of multivariate Brownian motion likelihood calculation from O($n^3$) to O($n^2$) and developed efficient MCMC proposal distributions, cutting model runtime from months to hours for phylogenetic inference. [\href{https://github.com/NikVetr/papers/blob/main/sysbio-manuscript\%20/mvBM_manuscript_sysbio.pdf}{Paper Draft}]
+    \item \textbf{Bayesian Differential Expression:} Collaborated on the design and implementation of Bayesian models for differential gene expression analysis from RNA-seq data. [\href{https://github.com/bob-carpenter/BayesExpress}{Repo}]
+    \item \textbf{Crossword Generation via MCMC:} Developed a novel MCMC algorithm exploring the space of valid crossword puzzles to generate grids conforming to user-specified image shapes. [\href{https://github.com/NikVetr/crossword}{Code}]
+    \item \textbf{SMS-Based Multimodal Assistant:} Implemented an AWS-based chat assistant leveraging multiple APIs (text, image generation) accessible via SMS for users unfamiliar with modern UIs. [\href{https://github.com/NikVetr/minor_scripts/blob/master/postdoc/email_gma_chatGPT-clone.py}{Code}]
+\end{itemize}
+\vspace{-2mm}
+
+% --- Skills --- % Updated and Grouped
+\section{\textcolor{DarkRed}{Skills}}
+\vspace{-1mm}
+\textbf{Programming:} \textbf{R}, \textbf{Stan} (expert), \textbf{BASH}, Python, C\texttt{++}, SQL (basic), Git \\
+\textbf{Statistical Methods:} \textbf{Bayesian Inference}, MCMC Methods, Hierarchical Models, GLMs/GLMMs, Survival Analysis, Multivariate Statistics, Time Series Analysis, Causal Inference, Optimization \\
+\textbf{Bioinformatics & Data Science:} Multi-omics Data Integration (Genomics, Transcriptomics, Proteomics, Epigenomics), GWAS/QTL Analysis, ASE Analysis, RNA-seq/scRNA-seq (analysis concepts), Population Genetics, Statistical Genetics, Machine Learning (basics), Data Visualization, HPC \\
+\textbf{Domain Knowledge:} Molecular Biology, Human Genetics, Oncology (Ovarian Cancer), Exercise Physiology, Evolutionary Biology \\
+\textbf{Languages:} English (Native), Russian (Native), Spanish (Proficient)
+\vspace{-2mm}
+
+% --- Education --- % Condensed
+\section{\textcolor{DarkRed}{Education}}
+\textbf{PhD}, University of California, Davis \hfill \emph{2020} \\
+\textit{Anthropology + Population Biology + Data Science & Informatics} \\
+Dissertation: \textit{Exploring and Extending Multivariate Brownian Diffusion Models of Phenotypic Evolution}
+
+\textbf{BA}, Vanderbilt University \hfill \emph{2013} \\
+\textit{Earth & Environmental Sciences + Ecology, Evolution & Organismal Biology} \\
+Departmental Honors, \textit{summa cum laude}
+\vspace{-2mm}
+
+% --- Selected Publications --- % Highly condensed
+\section{\textcolor{DarkRed}{Selected Publications}}
+\vspace{-1mm}
+\textbf{Vetr, N.}, Gay, N., and Montgomery, S. 2024. The impact of exercise on gene regulation in association with complex trait genetics. \textit{Nature Communications} 15(3346). \\
+MoTrPAC Study Group (\textbf{Vetr, N.} Author Group 2/8). 2024. Temporal dynamics of the multi-omic response to endurance exercise training across tissues. \textit{Nature} 629(8010). \\
+(Full list available upon request or via Google Scholar)
+\vspace{-2mm}
+
+% --- Leadership & Awards --- % Combined and Condensed
+\section{\textcolor{DarkRed}{Leadership \& Awards}}
+\vspace{-1mm}
+\textbf{President}, Board of Directors, \textit{Rethink Priorities} (Research Non-Profit) \hfill \emph{2023 - Present} \\
+\textbf{President}, Board of Directors, \textit{Wild Animal Initiative} (Research Non-Profit) \hfill \emph{2020 - Present} \\
+NIH T15 Training Grant Recipient \hfill \emph{2021} \\
+NSF Graduate Research Fellowship \hfill \emph{2015}
+\vspace{-2mm}
+
+% --- Remove Teaching and Service --- %
+
+\end{resume}
+\end{document}
